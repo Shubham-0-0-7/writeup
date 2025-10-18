@@ -1,0 +1,65 @@
+{
+  "title": "Recent Writeups",
+  "items": [
+    {
+      "title": "Bandit Level 0 → 1",
+      "permalink": "/writeup/blog/2024/10/18/bandit-0-1",
+      "unlisted": false,
+      "date": "2024-10-18T00:00:00.000Z"
+    },
+    {
+      "title": "Bandit Level 1 → 2",
+      "permalink": "/writeup/blog/2024/10/18/bandit-1-2",
+      "unlisted": false,
+      "date": "2024-10-18T00:00:00.000Z"
+    },
+    {
+      "title": "Bandit Level 13 → 14",
+      "permalink": "/writeup/blog/2024/10/18/bandit-13-14",
+      "unlisted": false,
+      "date": "2024-10-18T00:00:00.000Z"
+    },
+    {
+      "title": "Bandit Level 14 → 15",
+      "permalink": "/writeup/blog/2024/10/18/bandit-14-15",
+      "unlisted": false,
+      "date": "2024-10-18T00:00:00.000Z"
+    },
+    {
+      "title": "Bandit Level 15 → 16",
+      "permalink": "/writeup/blog/2024/10/18/bandit-15-16",
+      "unlisted": false,
+      "date": "2024-10-18T00:00:00.000Z"
+    },
+    {
+      "title": "Bandit Level 16 → 17",
+      "permalink": "/writeup/blog/2024/10/18/bandit-16-17",
+      "unlisted": false,
+      "date": "2024-10-18T00:00:00.000Z"
+    },
+    {
+      "title": "Bandit Level 2 → 3",
+      "permalink": "/writeup/blog/2024/10/18/bandit-2-3",
+      "unlisted": false,
+      "date": "2024-10-18T00:00:00.000Z"
+    },
+    {
+      "title": "Bandit Level 3 → 4",
+      "permalink": "/writeup/blog/2024/10/18/bandit-3-4",
+      "unlisted": false,
+      "date": "2024-10-18T00:00:00.000Z"
+    },
+    {
+      "title": "Bandit Level 4 → 5",
+      "permalink": "/writeup/blog/2024/10/18/bandit-4-5",
+      "unlisted": false,
+      "date": "2024-10-18T00:00:00.000Z"
+    },
+    {
+      "title": "Bandit Level 5 → 6",
+      "permalink": "/writeup/blog/2024/10/18/bandit-5-6",
+      "unlisted": false,
+      "date": "2024-10-18T00:00:00.000Z"
+    }
+  ]
+}

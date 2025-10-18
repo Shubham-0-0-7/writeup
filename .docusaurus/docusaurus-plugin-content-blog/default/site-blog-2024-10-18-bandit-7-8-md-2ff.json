@@ -1,0 +1,55 @@
+{
+  "permalink": "/writeup/blog/2024/10/18/bandit-7-8",
+  "source": "@site/blog/2024-10-18-bandit-7-8.md",
+  "title": "Bandit Level 7 → 8",
+  "description": "Login : ssh bandit6@bandit.labs.overthewire.org -p 2220",
+  "date": "2024-10-18T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "bandit",
+      "permalink": "/writeup/blog/tags/bandit"
+    },
+    {
+      "inline": true,
+      "label": "overthewire",
+      "permalink": "/writeup/blog/tags/overthewire"
+    },
+    {
+      "inline": true,
+      "label": "cybersecurity",
+      "permalink": "/writeup/blog/tags/cybersecurity"
+    }
+  ],
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Shubham",
+      "title": "Cybersecurity Enthusiast",
+      "url": "https://github.com/Shubham-0-0-7",
+      "imageURL": "https://github.com/Shubham-0-0-7.png",
+      "key": "shubham",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "title": "Bandit Level 7 → 8",
+    "authors": [
+      "shubham"
+    ],
+    "tags": [
+      "bandit",
+      "overthewire",
+      "cybersecurity"
+    ]
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Bandit Level 6 → 7",
+    "permalink": "/writeup/blog/2024/10/18/bandit-6-7"
+  },
+  "nextItem": {
+    "title": "Bandit Passwords",
+    "permalink": "/writeup/blog/2024/10/18/bandit-passwords"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "permalink": "/writeup/blog/2024/10/18/natas-1",
+  "source": "@site/blog/2024-10-18-natas-1.md",
+  "title": "Natas Level 1",
+  "description": "Again inspect element",
+  "date": "2024-10-18T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "natas",
+      "permalink": "/writeup/blog/tags/natas"
+    },
+    {
+      "inline": true,
+      "label": "overthewire",
+      "permalink": "/writeup/blog/tags/overthewire"
+    },
+    {
+      "inline": true,
+      "label": "cybersecurity",
+      "permalink": "/writeup/blog/tags/cybersecurity"
+    }
+  ],
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Shubham",
+      "title": "Cybersecurity Enthusiast",
+      "url": "https://github.com/Shubham-0-0-7",
+      "imageURL": "https://github.com/Shubham-0-0-7.png",
+      "key": "shubham",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "title": "Natas Level 1",
+    "authors": [
+      "shubham"
+    ],
+    "tags": [
+      "natas",
+      "overthewire",
+      "cybersecurity"
+    ]
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Natas Level 0",
+    "permalink": "/writeup/blog/2024/10/18/natas-0"
+  },
+  "nextItem": {
+    "title": "Natas Level 2",
+    "permalink": "/writeup/blog/2024/10/18/natas-2"
+  }
+}

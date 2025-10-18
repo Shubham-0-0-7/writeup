@@ -1,0 +1,55 @@
+{
+  "permalink": "/writeup/blog/2024/10/18/bandit-1-2",
+  "source": "@site/blog/2024-10-18-bandit-1-2.md",
+  "title": "Bandit Level 1 → 2",
+  "description": "Login",
+  "date": "2024-10-18T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": true,
+      "label": "bandit",
+      "permalink": "/writeup/blog/tags/bandit"
+    },
+    {
+      "inline": true,
+      "label": "overthewire",
+      "permalink": "/writeup/blog/tags/overthewire"
+    },
+    {
+      "inline": true,
+      "label": "cybersecurity",
+      "permalink": "/writeup/blog/tags/cybersecurity"
+    }
+  ],
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Shubham",
+      "title": "Cybersecurity Enthusiast",
+      "url": "https://github.com/Shubham-0-0-7",
+      "imageURL": "https://github.com/Shubham-0-0-7.png",
+      "key": "shubham",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "title": "Bandit Level 1 → 2",
+    "authors": [
+      "shubham"
+    ],
+    "tags": [
+      "bandit",
+      "overthewire",
+      "cybersecurity"
+    ]
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Bandit Level 0 → 1",
+    "permalink": "/writeup/blog/2024/10/18/bandit-0-1"
+  },
+  "nextItem": {
+    "title": "Bandit Level 13 → 14",
+    "permalink": "/writeup/blog/2024/10/18/bandit-13-14"
+  }
+}
