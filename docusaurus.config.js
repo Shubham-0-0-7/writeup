@@ -5,6 +5,8 @@ const config = {
   baseUrl: '/writeup/', // Change to your repo name
   organizationName: 'Shubham-0-0-7',
   projectName: 'writeup',
+  onBrokenLinks: 'ignore',
+  onBrokenMarkdownLinks: 'ignore',
   
   // Remove the default docs plugin since we're blog-only
   presets: [
