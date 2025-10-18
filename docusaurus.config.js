@@ -41,12 +41,12 @@ const config = {
       },
       items: [
         {
-          to: '/tags',
+          to: 'tags',
           label: 'Tags',
           position: 'left',
         },
         {
-          to: '/archive',
+          to: 'archive',
           label: 'Archive',
           position: 'left',
         },
@@ -65,11 +65,11 @@ const config = {
           items: [
             {
               label: 'Bandit',
-              to: '/tags/bandit',
+              to: 'tags/bandit',
             },
             {
               label: 'Natas',
-              to: '/tags/natas',
+              to: 'tags/natas',
             },
           ],
         },
