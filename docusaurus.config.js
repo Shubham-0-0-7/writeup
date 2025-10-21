@@ -1,5 +1,5 @@
 const config = {
-  title: "Shubham's Cybersecurity Blog",
+  title: "Portfolio",
   tagline: 'Writeups | Challenges | Learning Journey',
   url: 'https://shubham-0-0-7.github.io',
   baseUrl: '/writeup/', // Change to your repo name
@@ -18,7 +18,7 @@ const config = {
           path: 'blog',
           routeBasePath: '/blog', // Make blog the homepage
           showReadingTime: false,
-          blogTitle: "Shubham's Cybersecurity Blog",
+          blogTitle: "Portfolio",
           blogDescription: 'Bandit, Natas, and other cybersecurity challenge writeups',
           postsPerPage: 10,
           blogSidebarTitle: 'Recent Writeups',
@@ -36,7 +36,7 @@ const config = {
 
   themeConfig: {
     navbar: {
-      title: "Shubham's Cybersecurity Blog",
+      title: "Portfolio",
       logo: {
         alt: 'Cybersecurity Blog Logo',
         src: 'img/logo.svg',

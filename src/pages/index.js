@@ -81,7 +81,7 @@ export default function Home() {
   }
 
   return (
-    <Layout title="Shubham - Cybersecurity Portfolio" description="Shubham — Cybersecurity learner, artist, math enthusiast.">
+    <Layout title="Shubham">
       {/* vertical nav */}
       <nav className="vertical-nav" aria-label="Main">
         <ul>
