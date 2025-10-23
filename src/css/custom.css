@@ -389,3 +389,79 @@ a.icon-link:hover, .writeup-card:hover, .project-card:hover {
   position: relative;
   z-index: 2;
 }
+
+/* ---------- WRITEUPS LAYOUT ---------- */
+
+.writeups-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.writeups-main {
+  flex: 3;
+}
+
+.writeups-sidebar {
+  flex: 1;
+  border-left: 1px solid rgba(255,255,255,0.1);
+  padding-left: 1.5rem;
+}
+
+.writeup-card {
+  display: block;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  background: rgba(255,255,255,0.03);
+  transition: all 0.3s ease;
+}
+
+.writeup-card:hover {
+  border-color: #4bb4ff;
+  transform: translateY(-3px);
+}
+
+.writeup-card h3 {
+  margin: 0 0 0.3rem;
+  color: #fff;
+}
+
+.writeup-card small {
+  opacity: 0.6;
+}
+
+.writeups-sidebar h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #4bb4ff;
+}
+
+.writeups-sidebar a {
+  display: block;
+  padding: 0.3rem 0;
+  text-decoration: none;
+  color: rgba(255,255,255,0.8);
+  transition: color 0.2s;
+}
+
+.writeups-sidebar a:hover {
+  color: #4bb4ff;
+}
+
+.view-all {
+  margin-top: 1rem;
+  display: inline-block;
+  color: #4bb4ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+

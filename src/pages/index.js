@@ -81,7 +81,7 @@ export default function Home() {
   }
 
   return (
-    <Layout title="Shubham">
+    <Layout title="Shubham" wrapperClassName="homepage">
       {/* vertical nav */}
       <nav className="vertical-nav" aria-label="Main">
         <ul>
@@ -198,21 +198,26 @@ building, breaking, and creating with logic and design.`}
         </section>
 
         {/* WRITEUPS (Blog posts) */}
-        <section id="writeups" className="section writeups-section">
+        {/* WRITEUPS SECTION */}
+<section id="writeups" className="section writeups-section">
   <div className="page-container">
     <h2 className="section-title">Writeups</h2>
-    <p className="lead">CTF challenge walkthroughs and notes:</p>
+    <p className="lead">
+      CTF challenge walkthroughs and OverTheWire solutions:
+    </p>
 
     <div className="writeups-grid">
       {/* Bandit Card */}
       <article className="writeup-card">
         <h3>Bandit</h3>
         <p className="snippet">
-          Step-by-step OverTheWire Bandit writeups focusing on Linux fundamentals,
-          privilege escalation, and command-line problem-solving.
+          Linux and SSH-based wargame focusing on file permissions, privilege escalation,
+          and shell navigation — perfect for beginners.
         </p>
         <div className="project-links">
-          <a className="icon-link" href={useBaseUrl("/bandit")}>View Bandit Writeups →</a>
+          <a className="icon-link" href={useBaseUrl("/bandit")}>
+            View Bandit Writeups →
+          </a>
         </div>
       </article>
 
@@ -220,16 +225,33 @@ building, breaking, and creating with logic and design.`}
       <article className="writeup-card">
         <h3>Natas</h3>
         <p className="snippet">
-          Web security challenge writeups from OverTheWire Natas — covering HTML,
-          HTTP, JavaScript, and exploit techniques.
+          Web exploitation series exploring HTML, HTTP, cookies, and scripts — ideal for
+          cybersecurity learners diving into web security.
         </p>
         <div className="project-links">
-          <a className="icon-link" href={useBaseUrl("/natas")}>View Natas Writeups →</a>
+          <a className="icon-link" href={useBaseUrl("/natas")}>
+            View Natas Writeups →
+          </a>
+        </div>
+      </article>
+
+      {/* All Writeups Card */}
+      <article className="writeup-card">
+        <h3>All Writeups</h3>
+        <p className="snippet">
+          Explore every published writeup — Bandit, Natas, and other challenges,
+          organized by date and topic.
+        </p>
+        <div className="project-links">
+          <a className="icon-link" href={useBaseUrl("/allwriteups")}>
+            View All Writeups →
+          </a>
         </div>
       </article>
     </div>
   </div>
 </section>
+
 
         {/* CONTACT */}
         <section id="contact" className="section contact-section">
