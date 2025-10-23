@@ -32,7 +32,7 @@ const PROJECTS = [
   {
     title: "Chess",
     year: "2025",
-    desc: "A full chess engine in C++ using OOP with polymorphic pieces, move validation, check detection, and special moves. Features console based visualization with proper chess rules and game mechanics.",
+    desc: "A full chess game in C++ using OOP with polymorphic pieces, move validation, check detection, and special moves. Features console based visualization with proper chess rules and game mechanics.",
     tags: ["c++", "cpp", "oop"],
     repo: "https://github.com/VekariaNeel/Chess-OOPs-Project",
   },
