@@ -169,7 +169,7 @@ building, breaking, and creating with logic and design.`}
               </div>
               <div className="skill-card">
                 <h3>Other</h3>
-                <p>drawing, photography, solving rubiks cube</p>
+                <p>drawing, photography, playing chess, solving rubiks cube</p>
               </div>
             </div>
           </div>
