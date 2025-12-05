@@ -235,6 +235,21 @@ building, breaking, and creating with logic and design.`}
         </div>
       </article>
 
+      {/* Cybersec Basics Card */}
+      <article className="writeup-card">
+        <h3>Cybersecurity Basics</h3>
+        <p className="snippet">
+          Linux commands, Windows fundamentals, PowerShell, networking basics, and
+          foundational concepts for beginners.
+        </p>
+        <div className="project-links">
+          <a className="icon-link" href={useBaseUrl("/cybersecbasics")}>
+            View Cybersec Basics →
+          </a>
+        </div>
+      </article>
+
+
       {/* All Writeups Card */}
       <article className="writeup-card">
         <h3>All Writeups</h3>

@@ -526,3 +526,27 @@ body::before {
   border: none !important;
 }
 
+.writeup-card {
+  display: block;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  margin: 1rem 0;
+  transition: all 0.25s ease;
+}
+
+.writeup-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.writeup-card small {
+  opacity: 0.6;
+}
+
+.writeup-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.3);
+}
