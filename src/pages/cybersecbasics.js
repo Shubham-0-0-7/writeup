@@ -58,6 +58,20 @@ export default function CybersecBasics() {
           >
             Networking Essentials (Dec 2025)
           </Link>
+
+          <Link
+            to="/writeup/blog/2025/12/06/netw-core-protocols"
+            className="writeup-card"
+          >
+            Networking Core Protocols (Dec 2025)
+          </Link>
+
+          <Link
+            to="/writeup/blog/2025/12/07/wiresharkbasics"
+            className="writeup-card"
+          >
+            Wireshark Basics
+          </Link>
         </div>
       </div>
     </Layout>
