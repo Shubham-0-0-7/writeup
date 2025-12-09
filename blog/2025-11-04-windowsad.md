@@ -293,3 +293,4 @@ windows fundamentals + active directory fundamentals combine into one big idea:
 
 understanding these core systems is enough to navigate almost any Windows/AD cybersecurity task.
 
+`<!-- truncate -->`

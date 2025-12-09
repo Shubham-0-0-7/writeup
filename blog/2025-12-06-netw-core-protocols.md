@@ -172,3 +172,5 @@ Conclusion
 networking core protocols explain how websites load, how domains resolve, how files are transferred, and how emails flow across servers.
 
 if you understand dns, whois, http, ftp, smtp/pop3/imap — you understand how humans communicate over the internet at protocol-level.
+
+`<!-- truncate -->`

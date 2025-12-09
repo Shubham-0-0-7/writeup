@@ -72,6 +72,13 @@ export default function CybersecBasics() {
           >
             Wireshark Basics
           </Link>
+
+          <Link
+            to="/writeup/blog/2025/12/09/tcpdump"
+            className="writeup-card"
+          >
+            Tcpdump Basics
+          </Link>
         </div>
       </div>
     </Layout>

@@ -46,3 +46,4 @@ some CORS headers are
 ### Cookies 
 these are small pieces of data that web server stores on your browser to remember information between requests .. so question arises why cookies exists? http is stateless .. every request is independent ... server doesnt remember you ... cookies fix that by storing small data on your device so that server can recognize you whenever you revisit   
 cookies are stored in browsers in small text files and server sends them as `Set-Cookie` http header.  
+`<!-- truncate -->`

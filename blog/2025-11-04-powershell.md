@@ -155,3 +155,4 @@ all powershell concepts boil down to this:
 if you understand cmdlets, pipelines, filtering, and basic system commands,  
 you already understand the core of PowerShell.
 
+`<!-- truncate -->`

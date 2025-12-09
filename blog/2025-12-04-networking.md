@@ -161,3 +161,4 @@ all networking concepts here boil down to one idea:
 **data doesn’t just travel; it passes through layers, gets wrapped with info, uses protocols to move, and gets delivered safely using IP + TCP/UDP.**  
 
 this is the backbone of how the internet works.
+`<!-- truncate -->`

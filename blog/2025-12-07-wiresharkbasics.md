@@ -160,3 +160,4 @@ it shows you real traffic, real protocols, and real packet structures — no abs
 if you understand how to filter, dissect, and interpret packets in wireshark,  
 you basically understand how data truly moves across networks.
 
+`<!-- truncate -->`
