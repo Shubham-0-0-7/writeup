@@ -36,6 +36,23 @@ const PROJECTS = [
     tags: ["c++", "cpp", "oop"],
     repo: "https://github.com/VekariaNeel/Chess-OOPs-Project",
   },
+  {
+    title: "HTTP server in C",
+    year: "2026",
+    desc: "A small http/1.0 server in c that treats tcp as a byte stream, enforces server-side trust boundaries, and avoids heap allocation in the request path for predictable memory behavior. ",
+    tags: ["c", "network programming", "socket programming"],
+    repo: "https://github.com/Shubham-0-0-7/http_server_in_c",
+  },
+  {
+    title: "Runtime Decrypted Execution pipeline",
+    year: "2026",
+    desc: "Low-level C implementation of runtime-only code execution using anonymous memory mappings, permission transitions, and memory wiping to resist static analysis. ",
+    tags: ["c", "kernel", "memory"],
+    repo: "https://github.com/Shubham-0-0-7/runtime_decrypted_execution_pipeline",
+  },
+
+
+
 ];
 
 export default function Home() {
@@ -157,15 +174,15 @@ building, breaking, and creating with logic and design.`}
             <div className="skills-grid">
               <div className="skill-card">
                 <h3>Programming</h3>
-                <p>Python, C, C++, JavaScript, Bash</p>
+                <p>C, Assembly(x86 and ARM), C++, rust, python, MySQL, HTML, CSS, JS</p>
               </div>
               <div className="skill-card">
                 <h3>Cybersecurity</h3>
-                <p>CTF, forensics, pentesting fundamentals, Linux</p>
+                <p>CTF, pentesting fundamentals, Networking, Linux, Reverse engineering</p>
               </div>
               <div className="skill-card">
                 <h3>Tools</h3>
-                <p>git, nmap, wireshark, john the ripper, burp suite</p>
+                <p>git, nmap, wireshark, john the ripper, hydra, gobuster, burp suite, gdb, lldb, ghidra, IDA pro, Rizin-Cutter</p>
               </div>
               <div className="skill-card">
                 <h3>Other</h3>
