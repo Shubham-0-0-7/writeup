@@ -38,19 +38,13 @@ export default function Leviathan() {
             Leviathan 0 to 1
             </Link>
 
-            {/* <Link
-              to="/writeup/blog/2026/01/09/leviathan0-1"
-              className="writeup-card"
-            >
-
-            Leviathan 0 to 1
-            </Link>
             <Link
-              to="/writeup/blog/2026/01/09/leviathan0-1"
+              to="/writeup/blog/2026/01/09/leviathan1-2"
               className="writeup-card"
             >
-            Leviathan 0 to 1
-            </Link> */}
+            Leviathan 1 to 2
+            </Link>
+
           
         </div>
       </div>
