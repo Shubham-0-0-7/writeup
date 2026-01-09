@@ -188,6 +188,13 @@ export default function AllWriteups() {
                     Tcpdump Basics
                     </Link>
 
+                    <Link
+                      to="/writeup/blog/2026/01/09/leviathan0-1"
+                      className="writeup-card"
+                    >
+                    Leviathan 0 to 1
+                    </Link>
+
         </div>
 
       </div>

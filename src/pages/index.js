@@ -229,7 +229,7 @@ building, breaking, and creating with logic and design.`}
         <h3>Bandit</h3>
         <p className="snippet">
           Linux and SSH-based wargame focusing on file permissions, privilege escalation,
-          and shell navigation — perfect for beginners.
+          and shell navigation
         </p>
         <div className="project-links">
           <a className="icon-link" href={useBaseUrl("/bandit")}>
@@ -242,12 +242,24 @@ building, breaking, and creating with logic and design.`}
       <article className="writeup-card">
         <h3>Natas</h3>
         <p className="snippet">
-          Web exploitation series exploring HTML, HTTP, cookies, and scripts — ideal for
-          cybersecurity learners diving into web security.
+          Web exploitation series exploring HTML, HTTP, cookies, and scripts
         </p>
         <div className="project-links">
           <a className="icon-link" href={useBaseUrl("/natas")}>
             View Natas Writeups →
+          </a>
+        </div>
+      </article>
+
+      {/* Leviathan Card */}
+      <article className="writeup-card">
+        <h3>Leviathan</h3>
+        <p className="snippet">
+          Reverse engineering series from OverTheWire exploring binaries, permissions, and debugging
+        </p>
+        <div className="project-links">
+          <a className="icon-link" href={useBaseUrl("/leviathan")}>
+            View Leviathan Writeups →
           </a>
         </div>
       </article>
@@ -257,7 +269,7 @@ building, breaking, and creating with logic and design.`}
         <h3>Cybersecurity Basics</h3>
         <p className="snippet">
           Linux commands, Windows fundamentals, PowerShell, networking basics, and
-          foundational concepts for beginners.
+          foundational concepts
         </p>
         <div className="project-links">
           <a className="icon-link" href={useBaseUrl("/cybersecbasics")}>
@@ -266,6 +278,7 @@ building, breaking, and creating with logic and design.`}
         </div>
       </article>
 
+      
 
       {/* All Writeups Card */}
       <article className="writeup-card">
