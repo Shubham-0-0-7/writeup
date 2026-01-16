@@ -194,6 +194,21 @@ export default function AllWriteups() {
                     >
                     Leviathan 0 to 1
                     </Link>
+                    <Link
+                    to="/writeup/blog/2026/01/09/leviathan1-2"
+                    className="writeup-card"
+                    >
+                    Leviathan 1 to 2
+                    </Link>
+
+                     <Link
+                      to="/writeup/blog/2026/01/16/soc"
+                      className="writeup-card"
+                    >
+                    Anatomy of an Alert
+                    </Link>
+        
+
 
         </div>
 
