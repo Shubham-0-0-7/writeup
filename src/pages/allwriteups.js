@@ -207,7 +207,19 @@ export default function AllWriteups() {
                     >
                     Anatomy of an Alert
                     </Link>
-        
+
+                    <Link
+                      to="/writeup/blog/2026/01/18/alerttri"
+                      className="writeup-card"
+                    >
+                    SOC L1 Alert Triage
+                    </Link>
+                    <Link
+                      to="/writeup/blog/2026/01/18/alertrep"
+                      className="writeup-card"
+                    >
+                    SOC L1 Alert Reporting
+                    </Link>
 
 
         </div>
