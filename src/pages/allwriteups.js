@@ -221,6 +221,27 @@ export default function AllWriteups() {
                     SOC L1 Alert Reporting
                     </Link>
 
+                    <Link
+                      to="/writeup/blog/2026/01/20/workbook"
+                      className="writeup-card"
+                    >
+                    SOC Workbook and Lookups
+                    </Link>
+
+                    <Link
+                      to="/writeup/blog/2026/01/20/metrics"
+                      className="writeup-card"
+                    >
+                    SOC Metrics and Objectives
+                    </Link>
+
+                    <Link
+                      to="/writeup/blog/2026/01/20/siem"
+                      className="writeup-card"
+                    >
+                    Intro to SIEM
+                    </Link>
+
 
         </div>
 
