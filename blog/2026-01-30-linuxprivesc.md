@@ -31,6 +31,7 @@ Understanding how Linux handles users and permissions is critical for both explo
 
 <img width="1214" height="539" alt="image" src="https://github.com/user-attachments/assets/f533cc92-716c-4f54-9ae3-0e446707f98c" />
 
+source : https://drive.google.com/file/d/1I-diu5547PiQ9p_xnN5l7lhG31WWrsf6/view
 
 
 ## Enumeration: The First Step
