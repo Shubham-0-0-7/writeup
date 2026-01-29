@@ -29,7 +29,9 @@ Understanding how Linux handles users and permissions is critical for both explo
     * **SUID (Set User ID):** Runs the file with the permissions of the file owner (often root).
     * **SGID (Set Group ID):** Runs the file with the permissions of the group.
 
----
+<img width="1214" height="539" alt="image" src="https://github.com/user-attachments/assets/f533cc92-716c-4f54-9ae3-0e446707f98c" />
+
+
 
 ## Enumeration: The First Step
 
