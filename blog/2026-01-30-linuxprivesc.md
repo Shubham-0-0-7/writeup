@@ -1,3 +1,9 @@
+---
+title: "Linux Privilege Escalation"
+authors: [shubham]
+tags: [cybersecurity, privilege escalation, linux,  red team]
+---
+
 # Linux Privilege Escalation Guide
 
 > **Note:** This blog is made by taking reference from: [Delinea blog on Linux Privilege Escalation](https://delinea.com/blog/linux-privilege-escalation).
@@ -29,7 +35,7 @@ Understanding how Linux handles users and permissions is critical for both explo
     * **SUID (Set User ID):** Runs the file with the permissions of the file owner (often root).
     * **SGID (Set Group ID):** Runs the file with the permissions of the group.
 
-<img width="1214" height="539" alt="image" src="https://github.com/user-attachments/assets/f533cc92-716c-4f54-9ae3-0e446707f98c" />
+<img width="1214" height="350" alt="image" src="https://github.com/user-attachments/assets/f533cc92-716c-4f54-9ae3-0e446707f98c" />
 
 source : https://drive.google.com/file/d/1I-diu5547PiQ9p_xnN5l7lhG31WWrsf6/view
 

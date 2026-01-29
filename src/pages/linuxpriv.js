@@ -31,12 +31,12 @@ export default function LinuxPrivEsc() {
             marginTop: "2rem",
           }}
         >
-            {/* <Link
-              to="/writeup/blog/2026/"
+            <Link
+              to="/writeup/blog/2026/01/30/linuxprivesc"
               className="writeup-card"
             >
             What is Linux Privilege Escalation?
-            </Link> */}
+            </Link>
         </div>
       </div>
     </Layout>

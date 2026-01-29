@@ -264,6 +264,21 @@ building, breaking, and creating with logic and design.`}
         </div>
       </article>
 
+      {/* Linux priv esc Card */}
+      <article className="writeup-card">
+        <h3>Linux Privilege Escalation</h3>
+        <p className="snippet">
+          Explore various techniques for escalating privileges on Linux systems
+          from SUID binaries and Sudo rights to Kernel exploits and misconfigs
+        </p>
+        <div className="project-links">
+          <a className="icon-link" href={useBaseUrl("/linuxpriv")}>
+            View Linux Privilege Escalation Writeups →
+          </a>
+        </div>
+      </article>
+
+      
       {/* Cybersec Basics Card */}
       <article className="writeup-card">
         <h3>Cybersecurity Basics</h3>
