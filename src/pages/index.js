@@ -293,6 +293,18 @@ building, breaking, and creating with logic and design.`}
         </div>
       </article>
 
+      <article className="writeup-card">
+        <h3>Love at First Breach</h3>
+        <p className="snippet">
+          TryHackMe Valentine's CTF exploring rooms like Cupid's matchmaker, TryHeartMe, ValenFind, etc
+        </p>
+        <div className="project-links">
+          <a className="icon-link" href={useBaseUrl("/lovethm")}>
+            View CTF Writeups →
+          </a>
+        </div>
+      </article>
+
       
 
       {/* All Writeups Card */}
