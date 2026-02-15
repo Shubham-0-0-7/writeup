@@ -39,11 +39,10 @@ export default function LoveAtFirstBreach() {
 
           {/* Placeholder for the next room */}
           <Link
-            to="#"
+            to="/writeup/blog/2026/02/15/tryheartme"
             className="writeup-card"
-            style={{ opacity: 0.6, cursor: "default" }} 
           >
-            Room 2 Writeup (Coming Soon...)
+            TryHeartMe
           </Link>
           
           <Link
