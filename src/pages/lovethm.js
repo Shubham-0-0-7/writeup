@@ -46,11 +46,10 @@ export default function LoveAtFirstBreach() {
           </Link>
           
           <Link
-            to="#"
+            to="/writeup/blog/2026/02/17/whenheartscollide"
             className="writeup-card"
-            style={{ opacity: 0.6, cursor: "default" }} 
           >
-            Room 3 Writeup (Coming Soon...)
+            When Hearts Collide
           </Link>
         </div>
       </div>
