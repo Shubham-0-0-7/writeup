@@ -77,6 +77,10 @@ export default function Bandit() {
             Bandit Level 16 → 17
           </Link>
 
+          <Link to="/writeup/blog/2026/03/05/bandit-17-18" className="writeup-card">
+            Bandit Level 17 → 18
+          </Link>
+
         </div>
       </div>
     </Layout>
