@@ -136,7 +136,7 @@ export default function Home() {
             <div className="hello">Hello, <span className="wave">👋</span> I am</div>
             <h1 className="hero-name">shubham</h1>
             <p className="hero-desc">
-{`cybersecurity learner, artist, and math enthusiast.
+              {`cybersecurity learner, artist, and math enthusiast.
 building, breaking, and creating with logic and design.`}
             </p>
 
@@ -216,129 +216,143 @@ building, breaking, and creating with logic and design.`}
 
         {/* WRITEUPS (Blog posts) */}
         {/* WRITEUPS SECTION */}
-<section id="writeups" className="section writeups-section">
-  <div className="page-container">
-    <h2 className="section-title">Writeups</h2>
-    <p className="lead">
-      CTF challenge walkthroughs and OverTheWire solutions:
-    </p>
+        <section id="writeups" className="section writeups-section">
+          <div className="page-container">
+            <h2 className="section-title">Writeups</h2>
+            <p className="lead">
+              CTF challenge walkthroughs and OverTheWire solutions:
+            </p>
 
-    <div className="writeups-grid">
-      {/* Bandit Card */}
-      <article className="writeup-card">
-        <h3>Bandit</h3>
-        <p className="snippet">
-          Linux and SSH-based wargame focusing on file permissions, privilege escalation,
-          and shell navigation
-        </p>
-        <div className="project-links">
-          <a className="icon-link" href={useBaseUrl("/bandit")}>
-            View Bandit Writeups →
-          </a>
-        </div>
-      </article>
+            <div className="writeups-grid">
+              {/* Bandit Card */}
+              <article className="writeup-card">
+                <h3>Bandit</h3>
+                <p className="snippet">
+                  Linux and SSH-based wargame focusing on file permissions, privilege escalation,
+                  and shell navigation
+                </p>
+                <div className="project-links">
+                  <a className="icon-link" href={useBaseUrl("/bandit")}>
+                    View Bandit Writeups →
+                  </a>
+                </div>
+              </article>
 
-      {/* Natas Card */}
-      <article className="writeup-card">
-        <h3>Natas</h3>
-        <p className="snippet">
-          Web exploitation series exploring HTML, HTTP, cookies, and scripts
-        </p>
-        <div className="project-links">
-          <a className="icon-link" href={useBaseUrl("/natas")}>
-            View Natas Writeups →
-          </a>
-        </div>
-      </article>
+              {/* Natas Card */}
+              <article className="writeup-card">
+                <h3>Natas</h3>
+                <p className="snippet">
+                  Web exploitation series exploring HTML, HTTP, cookies, and scripts
+                </p>
+                <div className="project-links">
+                  <a className="icon-link" href={useBaseUrl("/natas")}>
+                    View Natas Writeups →
+                  </a>
+                </div>
+              </article>
 
-      {/* Leviathan Card */}
-      <article className="writeup-card">
-        <h3>Leviathan</h3>
-        <p className="snippet">
-          Reverse engineering series from OverTheWire exploring binaries, permissions, and debugging
-        </p>
-        <div className="project-links">
-          <a className="icon-link" href={useBaseUrl("/leviathan")}>
-            View Leviathan Writeups →
-          </a>
-        </div>
-      </article>
+              {/* Leviathan Card */}
+              <article className="writeup-card">
+                <h3>Leviathan</h3>
+                <p className="snippet">
+                  Reverse engineering series from OverTheWire exploring binaries, permissions, and debugging
+                </p>
+                <div className="project-links">
+                  <a className="icon-link" href={useBaseUrl("/leviathan")}>
+                    View Leviathan Writeups →
+                  </a>
+                </div>
+              </article>
 
-      {/* Linux priv esc Card */}
-      <article className="writeup-card">
-        <h3>Linux Privilege Escalation</h3>
-        <p className="snippet">
-          Explore various techniques for escalating privileges on Linux systems
-          from SUID binaries and Sudo rights to Kernel exploits and misconfigs
-        </p>
-        <div className="project-links">
-          <a className="icon-link" href={useBaseUrl("/linuxpriv")}>
-            View Linux Privilege Escalation Writeups →
-          </a>
-        </div>
-      </article>
+              {/* Linux priv esc Card */}
+              <article className="writeup-card">
+                <h3>Linux Privilege Escalation</h3>
+                <p className="snippet">
+                  Explore various techniques for escalating privileges on Linux systems
+                  from SUID binaries and Sudo rights to Kernel exploits and misconfigs
+                </p>
+                <div className="project-links">
+                  <a className="icon-link" href={useBaseUrl("/linuxpriv")}>
+                    View Linux Privilege Escalation Writeups →
+                  </a>
+                </div>
+              </article>
 
-      
-      {/* Cybersec Basics Card */}
-      <article className="writeup-card">
-        <h3>Cybersecurity Basics</h3>
-        <p className="snippet">
-          Linux commands, Windows fundamentals, PowerShell, networking basics, and
-          foundational concepts
-        </p>
-        <div className="project-links">
-          <a className="icon-link" href={useBaseUrl("/cybersecbasics")}>
-            View Cybersec Basics →
-          </a>
-        </div>
-      </article>
 
-      <article className="writeup-card">
-        <h3>Love at First Breach</h3>
-        <p className="snippet">
-          TryHackMe Valentine's CTF exploring rooms like Cupid's matchmaker, TryHeartMe, ValenFind, etc
-        </p>
-        <div className="project-links">
-          <a className="icon-link" href={useBaseUrl("/lovethm")}>
-            View CTF Writeups →
-          </a>
-        </div>
-      </article>
+              {/* Cybersec Basics Card */}
+              <article className="writeup-card">
+                <h3>Cybersecurity Basics</h3>
+                <p className="snippet">
+                  Linux commands, Windows fundamentals, PowerShell, networking basics, and
+                  foundational concepts
+                </p>
+                <div className="project-links">
+                  <a className="icon-link" href={useBaseUrl("/cybersecbasics")}>
+                    View Cybersec Basics →
+                  </a>
+                </div>
+              </article>
 
-      
+              <article className="writeup-card">
+                <h3>Love at First Breach</h3>
+                <p className="snippet">
+                  TryHackMe Valentine's CTF exploring rooms like Cupid's matchmaker, TryHeartMe, ValenFind, etc
+                </p>
+                <div className="project-links">
+                  <a className="icon-link" href={useBaseUrl("/lovethm")}>
+                    View CTF Writeups →
+                  </a>
+                </div>
+              </article>
 
-      {/* All Writeups Card */}
-      <article className="writeup-card">
-        <h3>All Writeups</h3>
-        <p className="snippet">
-          Explore every published writeup — Bandit, Natas, and other challenges,
-          organized by date and topic.
-        </p>
-        <div className="project-links">
-          <a className="icon-link" href={useBaseUrl("/allwriteups")}>
-            View All Writeups →
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+
+
+              {/* Pentesting Card */}
+              <article className="writeup-card">
+                <h3>Pentesting</h3>
+                <p className="snippet">
+                  Web application pentesting methodology — recon, application mapping,
+                  authentication analysis, input testing, and exploitation techniques
+                </p>
+                <div className="project-links">
+                  <a className="icon-link" href={useBaseUrl("/pentesting")}>
+                    View Pentesting Writeups →
+                  </a>
+                </div>
+              </article>
+
+              {/* All Writeups Card */}
+              <article className="writeup-card">
+                <h3>All Writeups</h3>
+                <p className="snippet">
+                  Explore every published writeup — Bandit, Natas, and other challenges,
+                  organized by date and topic.
+                </p>
+                <div className="project-links">
+                  <a className="icon-link" href={useBaseUrl("/allwriteups")}>
+                    View All Writeups →
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
 
 
         {/* CONTACT */}
         <section id="contact" className="section contact-section">
-  <div className="page-container">
-    <h2 className="section-title">Contact</h2>
-    <p className="lead">You can reach me at: <code>shubhamchhatbar1@gmail.com</code></p>
-    <div className="contact-actions">
-      <a className="button button-primary" href="mailto:shubhamchhatbar1@gmail.com">Email me</a>
-      <a className="button button-outline" href="https://github.com/Shubham-0-0-7" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a className="button button-outline" href="https://linkedin.com/in/shubhchhatbar27" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a className="button button-outline" href="https://instagram.com/7thdimensionartss" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a className="button button-outline" href="https://www.facebook.com/shubham.arts.31" target="_blank" rel="noopener noreferrer">Facebook</a>
-    </div>
-  </div>
-</section>
+          <div className="page-container">
+            <h2 className="section-title">Contact</h2>
+            <p className="lead">You can reach me at: <code>shubhamchhatbar1@gmail.com</code></p>
+            <div className="contact-actions">
+              <a className="button button-primary" href="mailto:shubhamchhatbar1@gmail.com">Email me</a>
+              <a className="button button-outline" href="https://github.com/Shubham-0-0-7" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a className="button button-outline" href="https://linkedin.com/in/shubhchhatbar27" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a className="button button-outline" href="https://instagram.com/7thdimensionartss" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a className="button button-outline" href="https://www.facebook.com/shubham.arts.31" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+          </div>
+        </section>
       </main>
     </Layout>
   );
