@@ -171,8 +171,8 @@ export default function Home() {
             <div className="hello">Hello, <span className="wave">👋</span> I am</div>
             <h1 className="hero-name">shubham</h1>
             <p className="hero-desc">
-              {`systems & security engineer. artist. math nerd.
-building close to the metal — one exploit at a time.`}
+              {`systems & security enthusiast. artist. math nerd.
+building close to the metal, one exploit at a time.`}
             </p>
 
             <div className="hero-actions">

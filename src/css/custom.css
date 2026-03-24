@@ -7,9 +7,15 @@
   --text: #ffffff;
   --muted: rgba(255, 255, 255, 0.55);
   --accent: #4bb4ff;
-  --radius: 10px;
+  --radius: 14px;
   --container-max: 1100px;
   --glass: rgba(255, 255, 255, 0.03);
+
+  /* Liquid Glass tokens */
+  --glass-bg: linear-gradient(135deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.04) 60%, rgba(255,255,255,0.08) 100%);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 1.5px 0 rgba(255,255,255,0.10) inset;
+  --glass-blur: blur(18px) saturate(1.8);
 }
 
 /* ============================================================
@@ -224,7 +230,7 @@ main {
   padding: 90px 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.02);
   position: relative;
-  background: transparent;
+  background: transparent !important;
   z-index: 2;
 }
 
@@ -424,22 +430,39 @@ main {
 }
 
 .skill-card {
-  padding: 20px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  padding: 22px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border-radius: var(--radius);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
   min-height: 120px;
-  transition: all .18s ease;
+  transition: all .22s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Inner top highlight shimmer */
+.skill-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(160deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .skill-card:hover {
-  border-color: rgba(75, 180, 255, 0.10);
-  transform: translateY(-4px);
+  border-color: rgba(75, 180, 255, 0.30);
+  box-shadow: 0 12px 40px rgba(75,180,255,0.12), 0 1.5px 0 rgba(255,255,255,0.14) inset;
+  transform: translateY(-6px) scale(1.01);
 }
 
 .skill-card h3 {
   margin: 0 0 8px;
   font-size: 1rem;
+  position: relative;
 }
 
 .skill-card p {
@@ -447,6 +470,7 @@ main {
   color: var(--muted);
   font-size: .9rem;
   line-height: 1.6;
+  position: relative;
 }
 
 @media (max-width: 980px) {
@@ -472,20 +496,34 @@ main {
 }
 
 .project-card {
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border-radius: var(--radius);
-  padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
   min-height: 180px;
   display: flex;
   flex-direction: column;
   transition: all .22s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(160deg, rgba(255,255,255,0.10) 0%, transparent 55%);
+  pointer-events: none;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(75, 180, 255, 0.05);
-  border-color: rgba(75, 180, 255, 0.10);
+  transform: translateY(-7px) scale(1.01);
+  box-shadow: 0 20px 50px rgba(75, 180, 255, 0.15), 0 1.5px 0 rgba(255,255,255,0.16) inset;
+  border-color: rgba(75, 180, 255, 0.32);
 }
 
 .project-card .year {
@@ -572,25 +610,39 @@ a.icon-link:hover {
 /* Canonical single .writeup-card definition */
 .writeup-card {
   display: block;
-  padding: 18px 20px;
+  padding: 20px 22px;
   border-radius: var(--radius);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
   color: var(--text);
   text-decoration: none;
-  transition: all .20s ease;
+  transition: all .22s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.writeup-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(145deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .writeup-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 36px rgba(75, 180, 255, 0.06);
-  border-color: rgba(75, 180, 255, 0.12);
-  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 18px 45px rgba(75, 180, 255, 0.14), 0 1.5px 0 rgba(255,255,255,0.15) inset;
+  border-color: rgba(75, 180, 255, 0.35);
 }
 
 .writeup-card h3 {
   margin: 0 0 8px;
   font-size: 1.1rem;
+  position: relative;
 }
 
 .writeup-card .snippet {
@@ -598,6 +650,7 @@ a.icon-link:hover {
   font-size: .92rem;
   line-height: 1.6;
   margin-bottom: 12px;
+  position: relative;
 }
 
 @media (max-width: 900px) {
@@ -616,10 +669,24 @@ a.icon-link:hover {
   gap: 24px;
   margin-top: 32px;
   padding: 40px 32px;
-  border-radius: 18px;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
   max-width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(150deg, rgba(255,255,255,0.10) 0%, transparent 55%);
+  pointer-events: none;
 }
 
 .contact-avatar {
@@ -708,6 +775,54 @@ a.icon-link:hover {
   border: none !important;
 }
 
+/* ============================================================
+   SUBPAGE BACKGROUND  — starfield + gradient so sub-pages
+   aren't plain black
+   ============================================================ */
+/* Applies to any page that is NOT the homepage */
+body:not(.homepage-body) .main-wrapper {
+  background:
+    radial-gradient(ellipse 60% 50% at 70% 20%, rgba(75,180,255,0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(255,255,255,0.04) 0%, transparent 65%),
+    #000;
+  min-height: 100vh;
+}
+
+/* Star background on all pages (not just homepage) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 220px 220px, 350px 350px, 500px 500px;
+  background-position: 80px 150px, 300px 250px, 700px 80px;
+  opacity: 0.30;
+}
+
+/* Ensure content sits above the fixed star layer */
+.main-wrapper,
+.navbar,
+article,
+[class^="docRoot"],
+[class*="docMainContainer"] {
+  position: relative;
+  z-index: 1;
+}
+
+/* Subpage content wrapper (the pages in /pages/) */
+.subpage-wrapper {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 55% 45% at 75% 15%, rgba(75,180,255,0.08) 0%, transparent 70%),
+    #000;
+  padding: 0;
+}
+
 /* writeup subpages layout */
 .writeups-container {
   display: flex;
@@ -755,4 +870,37 @@ a.icon-link:hover {
 
 .view-all:hover {
   text-decoration: underline;
+}
+
+/* ============================================================
+   SUBPAGE PAGE HEADER STYLE
+   ============================================================ */
+.subpage-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.subpage-container h1 {
+  font-size: clamp(28px, 6vw, 48px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.subpage-container > p:first-of-type {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 680px;
+}
+
+.subpage-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
