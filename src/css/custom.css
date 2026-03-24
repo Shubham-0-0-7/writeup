@@ -61,16 +61,43 @@ main {
 /* ============================================================
    FIXED STARFIELD BACKGROUND  (single source of truth)
    ============================================================ */
+/* ============================================================
+   MINIMAL RETRO GRID BACKGROUND 
+   ============================================================ */
 .bg-layer {
   position: fixed;
   inset: 0;
   z-index: 0;
-  overflow: hidden;
-  background: #000;
   pointer-events: none;
+  filter: blur(40px) saturate(1.4);
+
+  background:
+    radial-gradient(circle at 20% 30%, rgba(75, 205, 198, 0.315), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(0, 106, 212, 0.432), transparent 40%),
+    linear-gradient(180deg, #020202 0%, #000000 100%);
+}
+/* Adds a vignette/shadow to the edges so the grid fades into the darkness smoothly */
+.bg-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+
+  background-size: 80px 80px;
+  opacity: 0.2;
 }
 
-.stars {
+.bg-layer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, transparent 60%, rgba(0,0,0,0.6));
+}
+
+/* .stars {
   position: absolute;
   inset: 0;
   background-color: transparent;
@@ -84,7 +111,7 @@ main {
   background-position: 100px 200px, 400px 300px, 800px 100px, 1200px 500px;
   opacity: 0.55;
   filter: drop-shadow(0 0 1px white);
-}
+} */
 
 /* ============================================================
    PLANET BLOB  (parallax via inline transform from React)
@@ -322,13 +349,21 @@ main {
   text-decoration: none;
   cursor: pointer;
   border-radius: 999px;
-  padding: .6rem 1.4rem;
+  padding: 0.65rem 1.5rem;
   font-weight: 600;
   margin-right: 12px;
-  transition: all .18s ease;
+  transition: all .2s ease;
+
+  /* LIQUID GLASS */
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  color: var(--text);
 }
 
-.button-primary {
+/* .button-primary {
   background: linear-gradient(90deg, rgba(75, 180, 255, 0.10), rgba(75, 180, 255, 0.04));
   color: var(--text);
   border: 1px solid rgba(75, 180, 255, 0.12);
@@ -338,12 +373,46 @@ main {
   background: transparent;
   color: var(--text);
   border: 1px solid rgba(255, 255, 255, 0.08);
+} */
+.button {
+  position: relative;
+  overflow: hidden;
 }
 
-.button:hover {
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    140deg,
+    rgba(255,255,255,0.25) 0%,
+    rgba(255,255,255,0.08) 40%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* .button:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(75, 180, 255, 0.06);
   color: var(--text);
+} */
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 12px 40px rgba(75, 180, 255, 0.18),
+    0 1.5px 0 rgba(255,255,255,0.18) inset;
+
+  border-color: rgba(75, 180, 255, 0.35);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.14),
+      rgba(255,255,255,0.05)
+    );
 }
 
 /* ============================================================
@@ -789,7 +858,7 @@ body:not(.homepage-body) .main-wrapper {
 }
 
 /* Star background on all pages (not just homepage) */
-body::before {
+/* body::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -802,7 +871,7 @@ body::before {
   background-size: 220px 220px, 350px 350px, 500px 500px;
   background-position: 80px 150px, 300px 250px, 700px 80px;
   opacity: 0.30;
-}
+} */
 
 /* Ensure content sits above the fixed star layer */
 .main-wrapper,
