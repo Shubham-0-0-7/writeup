@@ -12,9 +12,9 @@
   --glass: rgba(255, 255, 255, 0.03);
 
   /* Liquid Glass tokens */
-  --glass-bg: linear-gradient(135deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.04) 60%, rgba(255,255,255,0.08) 100%);
+  --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.04) 60%, rgba(255, 255, 255, 0.08) 100%);
   --glass-border: rgba(255, 255, 255, 0.18);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 1.5px 0 rgba(255,255,255,0.10) inset;
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 1.5px 0 rgba(255, 255, 255, 0.10) inset;
   --glass-blur: blur(18px) saturate(1.8);
 }
 
@@ -449,13 +449,13 @@ main {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(160deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
   pointer-events: none;
 }
 
 .skill-card:hover {
   border-color: rgba(75, 180, 255, 0.30);
-  box-shadow: 0 12px 40px rgba(75,180,255,0.12), 0 1.5px 0 rgba(255,255,255,0.14) inset;
+  box-shadow: 0 12px 40px rgba(75, 180, 255, 0.12), 0 1.5px 0 rgba(255, 255, 255, 0.14) inset;
   transform: translateY(-6px) scale(1.01);
 }
 
@@ -516,13 +516,13 @@ main {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(160deg, rgba(255,255,255,0.10) 0%, transparent 55%);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.10) 0%, transparent 55%);
   pointer-events: none;
 }
 
 .project-card:hover {
   transform: translateY(-7px) scale(1.01);
-  box-shadow: 0 20px 50px rgba(75, 180, 255, 0.15), 0 1.5px 0 rgba(255,255,255,0.16) inset;
+  box-shadow: 0 20px 50px rgba(75, 180, 255, 0.15), 0 1.5px 0 rgba(255, 255, 255, 0.16) inset;
   border-color: rgba(75, 180, 255, 0.32);
 }
 
@@ -629,13 +629,13 @@ a.icon-link:hover {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(145deg, rgba(255,255,255,0.12) 0%, transparent 50%);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
   pointer-events: none;
 }
 
 .writeup-card:hover {
   transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 18px 45px rgba(75, 180, 255, 0.14), 0 1.5px 0 rgba(255,255,255,0.15) inset;
+  box-shadow: 0 18px 45px rgba(75, 180, 255, 0.14), 0 1.5px 0 rgba(255, 255, 255, 0.15) inset;
   border-color: rgba(75, 180, 255, 0.35);
 }
 
@@ -685,7 +685,7 @@ a.icon-link:hover {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(150deg, rgba(255,255,255,0.10) 0%, transparent 55%);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.10) 0%, transparent 55%);
   pointer-events: none;
 }
 
@@ -782,8 +782,8 @@ a.icon-link:hover {
 /* Applies to any page that is NOT the homepage */
 body:not(.homepage-body) .main-wrapper {
   background:
-    radial-gradient(ellipse 60% 50% at 70% 20%, rgba(75,180,255,0.07) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(255,255,255,0.04) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 50% at 70% 20%, rgba(75, 180, 255, 0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(255, 255, 255, 0.04) 0%, transparent 65%),
     #000;
   min-height: 100vh;
 }
@@ -818,7 +818,7 @@ article,
 .subpage-wrapper {
   min-height: 100vh;
   background:
-    radial-gradient(ellipse 55% 45% at 75% 15%, rgba(75,180,255,0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 45% at 75% 15%, rgba(75, 180, 255, 0.08) 0%, transparent 70%),
     #000;
   padding: 0;
 }
@@ -891,7 +891,7 @@ article,
   color: var(--text);
 }
 
-.subpage-container > p:first-of-type {
+.subpage-container>p:first-of-type {
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.7;
