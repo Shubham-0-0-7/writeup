@@ -71,6 +71,10 @@ export default function Bandit() {
           <Link to="/writeup/blog/2026/03/05/bandit-17-18" className="writeup-card">
             Bandit Level 17 → 18
           </Link>
+          <Link to="/writeup/blog/2026/03/05/bandit-18-19" className="writeup-card">
+            Bandit Level 18 → 19
+          </Link>
+          
 
           <Link to="/writeup/blog/2025/10/18/bandit-passwords" className="writeup-card">
             Bandit Passwords (Complete Dump)
