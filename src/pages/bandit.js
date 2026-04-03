@@ -40,9 +40,22 @@ export default function Bandit() {
           <Link to="/writeup/blog/2025/10/18/bandit-7-8" className="writeup-card">
             Bandit Level 7 → 8
           </Link>
-          <Link to="/writeup/blog/2025/10/18/bandit-passwords" className="writeup-card">
-            Bandit Passwords (Complete Dump)
+<Link to="/writeup/blog/2025/10/19/bandit-8-9" className="writeup-card">
+            Bandit Level 8 → 9
           </Link>
+          <Link to="/writeup/blog/2025/10/19/bandit-9-10" className="writeup-card">
+            Bandit Level 9 → 10
+          </Link>
+          <Link to="/writeup/blog/2025/10/19/bandit-10-11" className="writeup-card">
+            Bandit Level 10 → 11
+          </Link>
+          <Link to="/writeup/blog/2025/10/19/bandit-11-12" className="writeup-card">
+            Bandit Level 11 → 12
+          </Link>
+          <Link to="/writeup/blog/2025/10/19/bandit-12-13" className="writeup-card">
+            Bandit Level 12 → 13
+          </Link>
+          
           <Link to="/writeup/blog/2025/10/20/bandit-13-14" className="writeup-card">
             Bandit Level 13 → 14
           </Link>
@@ -57,6 +70,10 @@ export default function Bandit() {
           </Link>
           <Link to="/writeup/blog/2026/03/05/bandit-17-18" className="writeup-card">
             Bandit Level 17 → 18
+          </Link>
+
+          <Link to="/writeup/blog/2025/10/18/bandit-passwords" className="writeup-card">
+            Bandit Passwords (Complete Dump)
           </Link>
         </div>
       </div>
