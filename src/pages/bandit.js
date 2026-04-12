@@ -123,7 +123,13 @@ export default function Bandit() {
             Bandit Level 30 → 31
           </Link>
 
-  
+          <Link to="/writeup/blog/2026/04/12/bandit-31-32" className="writeup-card">
+            Bandit Level 31 → 32
+          </Link>
+
+          <Link to="/writeup/blog/2026/04/12/bandit-32-33" className="writeup-card">
+            Bandit Level 32 → 33
+          </Link>
 
           <Link to="/writeup/blog/2025/10/18/bandit-passwords" className="writeup-card">
             Bandit Passwords (Complete Dump)
