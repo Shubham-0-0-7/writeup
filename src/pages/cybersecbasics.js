@@ -37,6 +37,9 @@ export default function CybersecBasics() {
           <Link to="/writeup/blog/2025/12/09/tcpdump" className="writeup-card">
             Tcpdump Basics
           </Link>
+           <Link to="/writeup/blog/2026/06/09/http" className="writeup-card">
+            Understanding HTTP
+          </Link>
         </div>
       </div>
     </Layout>
