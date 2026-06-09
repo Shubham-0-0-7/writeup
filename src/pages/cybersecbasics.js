@@ -40,6 +40,9 @@ export default function CybersecBasics() {
            <Link to="/writeup/blog/2026/06/09/http" className="writeup-card">
             Understanding HTTP
           </Link>
+          <Link to="/writeup/blog/2026/06/09/routing" className="writeup-card">
+            Routing in Backend
+          </Link>
         </div>
       </div>
     </Layout>
