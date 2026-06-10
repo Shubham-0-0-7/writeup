@@ -333,6 +333,16 @@ building close to the metal, one exploit at a time.`}
               </article>
 
               <article className="writeup-card">
+                <h3>flAWS - Cloud Pentesting</h3>
+                <p className="snippet">
+                  AWS cloud exploitation and security configurations — S3 bucket leaks, IAM policies, and global credentials
+                </p>
+                <div className="project-links">
+                  <a className="icon-link" href={useBaseUrl("/flaws")}>View flAWS Writeups →</a>
+                </div>
+              </article>
+
+              <article className="writeup-card">
                 <h3>Cybersecurity Basics</h3>
                 <p className="snippet">
                   Linux commands, Windows fundamentals, PowerShell, networking, packet analysis

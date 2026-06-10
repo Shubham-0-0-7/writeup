@@ -99,6 +99,12 @@ export default function AllWriteups() {
           <Link to="/writeup/blog/2026/03/24/jurasicctf" className="writeup-card">Jurassic Park CTF: TryHackMe</Link>
         </div>
 
+        <h2>flAWS - Cloud Pentesting</h2>
+        <div className="subpage-cards">
+          <Link to="/writeup/blog/2026/06/10/flaws1" className="writeup-card">flAWS Level 1 (S3 Bucket Public Listing)</Link>
+          <Link to="/writeup/blog/2026/06/10/flaws2" className="writeup-card">flAWS Level 2 (Any Authenticated AWS User Access)</Link>
+        </div>
+
         <h2>SOC Writeups</h2>
         <div className="subpage-cards">
           <Link to="/writeup/blog/2026/01/16/soc" className="writeup-card">Anatomy of an Alert</Link>
