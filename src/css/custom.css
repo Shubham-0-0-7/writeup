@@ -1017,3 +1017,13 @@ article,
   flex-direction: column;
   gap: 14px;
 }
+
+/* Fix stretched images in blog posts and pages by preserving aspect ratio */
+.markdown img,
+.theme-blog-post-page img,
+.theme-blog-list-page img,
+article img,
+[class*="markdown"] img {
+  max-width: 100%;
+  height: auto !important;
+}

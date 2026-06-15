@@ -17,11 +17,24 @@ export default function Flaws() {
 
         <div className="subpage-cards">
           <Link to="/writeup/blog/2026/06/10/flaws1" className="writeup-card">
-            flAWS Level 1 (S3 Bucket Public Listing)
+            flAWS Level 1 
           </Link>
           <Link to="/writeup/blog/2026/06/10/flaws2" className="writeup-card">
-            flAWS Level 2 (Any Authenticated AWS User Access)
+            flAWS Level 2 
           </Link>
+          <Link to="/writeup/blog/2026/06/10/flaws3" className="writeup-card">
+            flAWS Level 3
+          </Link>
+          <Link to="/writeup/blog/2026/06/11/flaws4" className="writeup-card">
+            flAWS Level 4
+          </Link>
+          <Link to="/writeup/blog/2026/06/11/flaws5" className="writeup-card">
+            flAWS Level 5
+          </Link>
+          <Link to="/writeup/blog/2026/06/11/flaws6" className="writeup-card">
+            flAWS Level 6
+          </Link>
+
         </div>
       </div>
     </Layout>
