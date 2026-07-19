@@ -188,10 +188,10 @@ export default function Home() {
           </div>
 
           <div className="hero-content">
-            <div className="hello">Hello, <span className="wave">👋</span> I am</div>
+            <div className="terminal-prompt">$ whoami</div>
             <h1 className="hero-name">shubham</h1>
             <p className="hero-desc">
-              {`systems & security enthusiast. artist. math nerd.
+              {`systems internals, offensive security, and low-level development.
 building close to the metal, one exploit at a time.`}
             </p>
 
@@ -213,32 +213,30 @@ building close to the metal, one exploit at a time.`}
           <div className="page-container">
             <h2 className="section-title">About</h2>
             <p className="about-lead">
-              I'm an undergrad CS student who's been deep in the weeds of systems
-              and security for as long as I can remember.
+              I'm an undergrad CS student who got pulled into systems and security early
+              and never found a good reason to leave.
             </p>
             <p className="about-body">
-              Started with the usual — C, then quickly fell down the rabbit hole of
-              how things actually work underneath. Built things close to the metal: a
-              custom HTTP server from scratch parsing raw TCP bytes, a honeypot in
-              Rust catching real attackers in the wild, utilities that talk directly
-              to Linux kernel APIs. Got into CTFs, then started writing about them.
-              Somewhere along the way I went from solving wargame levels to building
-              and hosting one for 150+ people at my institute.
+              Started with C, then got curious about what's underneath it. Built things
+              close to the metal — a custom HTTP server parsing raw TCP bytes, a honeypot
+              in Rust catching real attackers, utilities that talk directly to Linux kernel
+              APIs. Got into CTFs, started writing about them, then ended up building and
+              hosting a 21-level wargame for 150+ people at my institute.
             </p>
             <p className="about-body">
-              The security side pulled me in hard — reverse engineering, binary
-              exploitation, privilege escalation, network security. Tools like GDB,
-              Ghidra, Wireshark became second nature. Picked up Rust because I
-              wanted memory safety without giving up control. Learned assembly because
-              I wanted to know what the compiler was hiding from me.
+              The security side took over from there — reverse engineering, binary
+              exploitation, privilege escalation, network internals. GDB, Ghidra, Wireshark
+              became second nature. Picked up Rust because I wanted memory safety without
+              giving up control. Learned assembly because I wanted to see what the compiler
+              was hiding.
             </p>
             <p className="about-body">
-              Now I spend time in the intersection of systems internals and security
-              — kernel mechanics, eBPF, namespaces, the stuff that most people treat
-              as a black box. Red team and blue team both interest me equally.
+              Now I mostly live in the intersection of systems internals and offensive
+              security — kernel mechanics, eBPF, namespaces, the stuff most people treat
+              as a black box. Red team and blue team both pull at me equally.
             </p>
             <p className="about-tldr">
-              TLDR, I know where the bodies are buried, and I probably put them there.
+              I know where the bodies are buried. I probably put most of them there.
             </p>
           </div>
         </section>
@@ -248,21 +246,29 @@ building close to the metal, one exploit at a time.`}
           <div className="page-container">
             <h2 className="section-title">Skills</h2>
             <div className="skills-grid">
-              <div className="skill-card">
+              <div className="skill-card programming">
                 <h3>Programming</h3>
-                <p>C, Assembly (x86 & ARM), C++, Rust, Python, MySQL, HTML, CSS, JS</p>
+                <div className="skill-tags">
+                  {["C", "Assembly (x86 & ARM)", "C++", "Rust", "Python", "MySQL", "HTML", "CSS", "JS"].map(s => <span className="skill-tag" key={s}>{s}</span>)}
+                </div>
               </div>
-              <div className="skill-card">
+              <div className="skill-card security">
                 <h3>Cybersecurity</h3>
-                <p>CTF, pentesting, networking, Linux internals, reverse engineering, binary exploitation</p>
+                <div className="skill-tags">
+                  {["CTF", "Pentesting", "Networking", "Linux Internals", "Reverse Engineering", "Binary Exploitation"].map(s => <span className="skill-tag" key={s}>{s}</span>)}
+                </div>
               </div>
-              <div className="skill-card">
+              <div className="skill-card tools">
                 <h3>Tools</h3>
-                <p>GDB, Ghidra, IDA Pro, Rizin/Cutter, Wireshark, Nmap, Burp Suite, John, Hydra, Gobuster</p>
+                <div className="skill-tags">
+                  {["GDB", "Ghidra", "IDA Pro", "Rizin/Cutter", "Wireshark", "Nmap", "Burp Suite", "John", "Hydra", "Gobuster"].map(s => <span className="skill-tag" key={s}>{s}</span>)}
+                </div>
               </div>
-              <div className="skill-card">
+              <div className="skill-card other">
                 <h3>Other</h3>
-                <p>drawing, photography, chess, rubik's cube, eBPF, kernel namespaces</p>
+                <div className="skill-tags">
+                  {["eBPF", "Kernel Namespaces", "Drawing", "Photography", "Chess", "Rubik's Cube"].map(s => <span className="skill-tag" key={s}>{s}</span>)}
+                </div>
               </div>
             </div>
           </div>
@@ -383,7 +389,7 @@ building close to the metal, one exploit at a time.`}
               </article>
 
 
-              <article className="writeup-card">
+              <article className="writeup-card all-writeups">
                 <h3>All Writeups</h3>
                 <p className="snippet">
                   Every published writeup — Bandit, Natas, and beyond, sorted by date and topic

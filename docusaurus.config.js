@@ -1,14 +1,13 @@
 const config = {
-  title: "Portfolio",
-  tagline: 'Writeups | Challenges | Learning Journey',
+  title: "Shubham Chhatbar | Systems & Security",
+  tagline: 'Systems internals, offensive security, and low-level development',
   url: 'https://shubham-0-0-7.github.io',
   baseUrl: '/', // Root level
   organizationName: 'Shubham-0-0-7',
-  projectName: 'writeup',
+  projectName: 'Shubham-0-0-7.github.io',
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
 
-  // Remove the default docs plugin since we're blog-only
   presets: [
     [
       'classic',
@@ -17,19 +16,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/docs',
         },
-        blog: {
-          path: 'blog',
-          routeBasePath: '/blog', // Make blog the homepage
-          showReadingTime: false,
-          blogTitle: "Portfolio",
-          blogDescription: 'Bandit, Natas, and other cybersecurity challenge writeups',
-          postsPerPage: 10,
-          blogSidebarTitle: 'Recent Writeups',
-          blogSidebarCount: 10,
-          onInlineTags: 'ignore',
-          remarkPlugins: [],
-          rehypePlugins: [],
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -39,61 +26,22 @@ const config = {
 
   themeConfig: {
     navbar: {
-      title: "Portfolio",
+      title: "Shubham Chhatbar",
       logo: {
-        alt: 'Cybersecurity Blog Logo',
+        alt: 'Logo',
         src: 'img/logo.svg',
       },
-      items: [
-        {
-          to: 'tags',
-          label: 'Tags',
-          position: 'left',
-        },
-        {
-          to: 'archive',
-          label: 'Archive',
-          position: 'left',
-        },
-        {
-          href: 'https://github.com/Shubham-0-0-7',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
+      items: [],
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Writeups',
-          items: [
-            {
-              label: 'Bandit',
-              to: 'tags/bandit',
-            },
-            {
-              label: 'Natas',
-              to: 'tags/natas',
-            },
-          ],
-        },
-        {
-          title: 'Connect',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/Shubham-0-0-7',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Shubham's Cybersecurity Blog. Built with Docusaurus.`,
+      links: [],
+      copyright: `Copyright © ${new Date().getFullYear()} Shubham Chhatbar.`,
     },
     colorMode: {
       defaultMode: 'dark',
-      disableSwitch: false,
-      respectPrefersColorScheme: true,
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
     },
   },
 };
