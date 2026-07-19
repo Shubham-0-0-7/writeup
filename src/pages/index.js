@@ -4,12 +4,12 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import useGlobalData from "@docusaurus/useGlobalData";
 
 const SECTIONS = [
-  { id: "hero", label: "Home", emoji: "🛸" },
-  { id: "about", label: "About", emoji: "🚀" },
-  { id: "skills", label: "Skills", emoji: "💻" },
-  { id: "work", label: "Work", emoji: "🪐" },
-  { id: "writeups", label: "Writeups", emoji: "📝" },
-  { id: "contact", label: "Contact", emoji: "📧" },
+  { id: "hero", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
+  { id: "work", label: "Work" },
+  { id: "writeups", label: "Writeups" },
+  { id: "contact", label: "Contact" },
 ];
 
 const PROJECTS = [
@@ -142,7 +142,6 @@ export default function Home() {
               aria-current={active === s.id ? "true" : "false"}
               title={s.label}
             >
-              <span className="emoji">{s.emoji}</span>
               <span className="label">{s.label}</span>
             </li>
           ))}
