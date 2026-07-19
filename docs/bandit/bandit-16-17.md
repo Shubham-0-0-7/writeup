@@ -71,8 +71,8 @@ verify error:num=18:self-signed certificate
 verify return:1
 depth=0 CN = SnakeOil
 verify return:1
-kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
 Correct!
+"rsa key will appear here"
 
 bandit16@bandit:~$ exit
 logout
