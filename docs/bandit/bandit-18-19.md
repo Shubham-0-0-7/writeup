@@ -1,0 +1,47 @@
+---
+sidebar_position: 20
+title: "Bandit Level 18 → 19"
+authors: [shubham]
+tags: [bandit, overthewire, cybersecurity]
+---
+
+# Bandit Level 18 to 19
+
+**Login:** `ssh bandit18@bandit.labs.overthewire.org -p 2220`  
+**Password:** `hga5tuuCLF6fFzBgnYw9cB3Srx9_no_a` (from Level 17)
+
+### task
+The password for the next level is stored in a file called **readme** in the home directory. However, someone has modified `.bashrc` to log you out immediately when you log in via SSH.
+
+### theory lil bit
+1. **SSH Command Execution**: Normally, when you SSH, the server starts an interactive shell. However, you can append a command at the end of your SSH string (e.g., `ssh user@host command`). The server will execute that single command and return the output without initiating a full login shell, effectively bypassing the `.bashrc` logout script.
+2. **.bashrc**: This is a script file that runs every time an interactive shell is started. In this level, it contains a command like `exit` or `logout`, which is why your connection closes immediately upon a standard login.
+3. **Pseudo-terminal (-t)**: Sometimes, if a command requires an interactive interface but is being blocked, forcing a terminal allocation with `-t` can help, or explicitly calling a different shell like `/bin/bash --norc` (though standard command execution is usually enough).
+
+### solution
+
+#### Method 1: Direct Command Execution
+By appending the command to the end of the SSH login, we bypass the interactive login shell entirely.
+
+```bash
+# List files to confirm the target
+ssh bandit18@bandit.labs.overthewire.org -p 2220 ls
+# Output: readme
+
+# Read the file directly
+ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
+# Output: cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
+```
+#### Method 2: Requesting a Shell
+You can force SSH to start a specific shell instead of the default one, which may avoid the triggers in the user's standard profile.
+
+```bash
+# Force a bash shell
+ssh bandit18@bandit.labs.overthewire.org -p 2220 /bin/bash
+ls
+readme
+cat readme
+cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
+```
+
+`<!-- truncate -->`

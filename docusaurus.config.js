@@ -2,7 +2,7 @@ const config = {
   title: "Portfolio",
   tagline: 'Writeups | Challenges | Learning Journey',
   url: 'https://shubham-0-0-7.github.io',
-  baseUrl: '/writeup/', // Change to your repo name
+  baseUrl: '/', // Root level
   organizationName: 'Shubham-0-0-7',
   projectName: 'writeup',
   onBrokenLinks: 'ignore',
@@ -13,7 +13,10 @@ const config = {
     [
       'classic',
       {
-        docs: false, // Disable docs
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/docs',
+        },
         blog: {
           path: 'blog',
           routeBasePath: '/blog', // Make blog the homepage

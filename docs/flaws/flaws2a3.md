@@ -1,0 +1,13 @@
+---
+sidebar_position: 9
+---
+
+# flAWS 2 Attacker 3
+
+lets look at the question and the lesson learnt ...   
+
+<img width="740" height="447" alt="Screenshot 2026-06-18 at 13 06 27" src="https://github.com/user-attachments/assets/b5a7fa13-fa4b-4db5-8388-eb23e209e5bc" />
+
+just like ec2 has a metadata endpoint at the IP `169.254.169.254`, ecs containers have a task metadata endpoint at the IP `169.254.170.2`    
+
+well rn the giving proxy is not working .. might write this article/blog later .. till then ...   

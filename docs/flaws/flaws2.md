@@ -1,0 +1,65 @@
+---
+sidebar_position: 2
+title: "flAWS Level 2"
+authors: [shubham]
+tags: [cloud, aws, s3, iam, acl, pentesting]
+---
+
+# flAWS Level 2
+
+moving on to level 2 ...   
+<img width="653" height="729" alt="Screenshot 2026-06-10 at 14 14 49" src="https://github.com/user-attachments/assets/a9260543-b8de-4a20-b5bd-582fc5560ffa" />   
+look here ... they have also given the explaination to the previous level .. good one ..    
+
+now its given that we'll need our own aws account ... so just go for it .. signup for free tier ... and create access key (make sure to download the access key .csv file else it will be gone) .. you might need while configuring aws-cli ... 
+if you are on mac use `brew install awscli` or if you are using linux .. then go for installation script ...  
+```bash
+# 1. Download the installer bundle
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+# 2. Extract the files
+unzip awscliv2.zip
+# 3. Run the installation script
+sudo ./aws/install
+```
+sorry i dont use windows :) ... just google it you'll find it easily ...
+
+then .. configure your aws using command .. `aws configure` ... it will ask for access key you just generated ... 
+once its done .. 
+use the command: `aws s3 ls s3://level2-c8b217a33fcf1f839f6f1f73a00a9ae7.flaws.cloud --region us-west-2`
+
+<img width="759" height="148" alt="Screenshot 2026-06-10 at 14 24 12" src="https://github.com/user-attachments/assets/1b4554db-7c46-4993-9985-234f5a528b54" />
+
+and yeah we got the file ... so what was the misconfiguration here?   
+the core vulnerability here comes down to a massive misunderstanding of how aws defines "authenticated users".   
+when developers set up permissions on a bucket, aws gives them a pre-made access control list (acl) group called "any authenticated aws user".   
+the mistake was that ... the developer thought: "cool, i want to block the random public, but i want anyone on my team who is logged into our aws organization to be able to see these files. i'll check this box."    
+
+### why it failed?   
+in aws architecture, "authenticated user" means absolutely anyone with a valid aws account anywhere on earth. it does not mean "authenticated to my specific company account". because aws manages identities globally, the brand-new personal account you just made is recognized as a valid, authenticated identity.   
+when you ran that aws s3 ls command with your new keys configured, the bucket looked at your signature, verified you were a real aws user, saw the broken permission policy, and let you right in to view the directory.
+
+
+### how to actually fix it   
+to secure this in the real world, you completely avoid using global acl groups. instead, you write a specific bucket policy that limits access strictly to your own unique aws account id or explicit iam roles, like this:   
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowOnlyMySpecificAccount",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::YOUR_ACCOUNT_ID:root"
+            },
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::level2-c8b217a33fcf1f839f6f1f73a00a9ae7.flaws.cloud"
+        }
+    ]
+}
+```
+
+anyway, grab that secret file name from the terminal output (secret-e4443fc.html), slap it onto the end of the level 2 URL, and let's head over to the next challenge page.
+<img width="661" height="212" alt="Screenshot 2026-06-10 at 14 37 21" src="https://github.com/user-attachments/assets/8b13712f-7101-42b2-b9a3-20d99c1f8d49" />
+
+

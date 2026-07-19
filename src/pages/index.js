@@ -14,6 +14,27 @@ const SECTIONS = [
 
 const PROJECTS = [
   {
+    title: "Prisma OS (In Development)",
+    year: "2026",
+    desc: "A custom operating system built from scratch. Exploring bootloaders, kernel development, memory management, and low-level system architecture.",
+    tags: ["c", "assembly", "os-dev", "systems"],
+    repo: "https://github.com/Shubham-0-0-7/prisma-os",
+  },
+  {
+    title: "Axum Vuln Lab",
+    year: "2026",
+    desc: "A intentionally vulnerable web application built with Rust and the Axum framework to demonstrate common web vulnerabilities and secure coding practices.",
+    tags: ["rust", "axum", "security", "web"],
+    repo: "https://github.com/Shubham-0-0-7/axum_vuln_lab",
+  },
+  {
+    title: "LLM Prompt Injection",
+    year: "2026",
+    desc: "A research project and testbed for exploring Large Language Model (LLM) vulnerabilities, specifically focusing on prompt injection techniques and defenses.",
+    tags: ["ai", "security", "python", "research"],
+    repo: "https://github.com/Shubham-0-0-7/llm_prompt_injection",
+  },
+  {
     title: "Telnet Honeypot",
     year: "2026",
     desc: "Minimal Rust honeypot using a thread-per-connection model and an explicit state machine. Captures attacker credentials and simulates a believable shell — catches real attackers in the wild.",
@@ -287,7 +308,7 @@ building close to the metal, one exploit at a time.`}
                   Linux and SSH-based wargame — file permissions, privilege escalation, shell navigation
                 </p>
                 <div className="project-links">
-                  <a className="icon-link" href={useBaseUrl("/bandit")}>View Bandit Writeups →</a>
+                  <a className="icon-link" href={useBaseUrl("/docs/category/bandit")}>View Bandit Writeups →</a>
                 </div>
               </article>
 
@@ -297,7 +318,7 @@ building close to the metal, one exploit at a time.`}
                   Web exploitation series — HTML source, HTTP, cookies, server-side scripting
                 </p>
                 <div className="project-links">
-                  <a className="icon-link" href={useBaseUrl("/natas")}>View Natas Writeups →</a>
+                  <a className="icon-link" href={useBaseUrl("/docs/category/natas")}>View Natas Writeups →</a>
                 </div>
               </article>
 
@@ -307,7 +328,7 @@ building close to the metal, one exploit at a time.`}
                   Reverse engineering series — binaries, SUID permissions, ltrace / strace debugging
                 </p>
                 <div className="project-links">
-                  <a className="icon-link" href={useBaseUrl("/leviathan")}>View Leviathan Writeups →</a>
+                  <a className="icon-link" href={useBaseUrl("/docs/category/leviathan")}>View Leviathan Writeups →</a>
                 </div>
               </article>
 
@@ -317,7 +338,7 @@ building close to the metal, one exploit at a time.`}
                   SUID binaries, sudo rights, cron jobs, kernel exploits and misconfigured services
                 </p>
                 <div className="project-links">
-                  <a className="icon-link" href={useBaseUrl("/linuxpriv")}>View Linux PrivEsc →</a>
+                  <a className="icon-link" href={useBaseUrl("/docs/category/linux-privesc")}>View Linux PrivEsc →</a>
                 </div>
               </article>
 
@@ -327,7 +348,7 @@ building close to the metal, one exploit at a time.`}
                   Web app pentesting methodology — recon, application mapping, auth analysis, exploitation
                 </p>
                 <div className="project-links">
-                  <a className="icon-link" href={useBaseUrl("/pentesting")}>View Pentesting Writeups →</a>
+                  <a className="icon-link" href={useBaseUrl("/docs/category/pentesting")}>View Pentesting Writeups →</a>
                 </div>
               </article>
 
@@ -337,7 +358,7 @@ building close to the metal, one exploit at a time.`}
                   AWS cloud exploitation and security configurations — S3 bucket leaks, IAM policies, and global credentials
                 </p>
                 <div className="project-links">
-                  <a className="icon-link" href={useBaseUrl("/flaws")}>View flAWS Writeups →</a>
+                  <a className="icon-link" href={useBaseUrl("/docs/category/flaws")}>View flAWS Writeups →</a>
                 </div>
               </article>
 
@@ -347,7 +368,7 @@ building close to the metal, one exploit at a time.`}
                   Linux commands, Windows fundamentals, PowerShell, networking, packet analysis
                 </p>
                 <div className="project-links">
-                  <a className="icon-link" href={useBaseUrl("/cybersecbasics")}>View Cybersec Basics →</a>
+                  <a className="icon-link" href={useBaseUrl("/docs/category/cybersecurity-basics")}>View Cybersec Basics →</a>
                 </div>
               </article>
 
@@ -357,7 +378,7 @@ building close to the metal, one exploit at a time.`}
                   TryHackMe Valentine's CTF — Cupid's matchmaker, TryHeartMe, ValenFind and more
                 </p>
                 <div className="project-links">
-                  <a className="icon-link" href={useBaseUrl("/lovethm")}>View CTF Writeups →</a>
+                  <a className="icon-link" href={useBaseUrl("/docs/category/ctf")}>View CTF Writeups →</a>
                 </div>
               </article>
 
@@ -368,7 +389,7 @@ building close to the metal, one exploit at a time.`}
                   Every published writeup — Bandit, Natas, and beyond, sorted by date and topic
                 </p>
                 <div className="project-links">
-                  <a className="icon-link" href={useBaseUrl("/allwriteups")}>View All Writeups →</a>
+                  <a className="icon-link" href={useBaseUrl("/docs")}>View All Writeups →</a>
                 </div>
               </article>
 
