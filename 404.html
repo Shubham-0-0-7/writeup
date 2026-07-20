@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      var newHost = "https://shubham-portfolio-seven-theta.vercel.app";
+      var path = window.location.pathname;
+      // Strip the "/writeup" part out of the old URL path
+      if (path.startsWith("/writeup")) {
+        path = path.substring(8);
+      }
+      var newUrl = newHost + path + window.location.search + window.location.hash;
+      window.location.replace(newUrl);
+    </script>
+    <meta http-equiv="refresh" content="2; url=https://shubham-portfolio-seven-theta.vercel.app/" />
+    <style>
+      body { background-color: #000; color: #fff; font-family: monospace; text-align: center; padding-top: 20vh; }
+      a { color: #4ade80; }
+    </style>
+  </head>
+  <body>
+    <p>We have moved! Redirecting you to our <a href="https://shubham-portfolio-seven-theta.vercel.app/">new portfolio</a>...</p>
+  </body>
+</html>
