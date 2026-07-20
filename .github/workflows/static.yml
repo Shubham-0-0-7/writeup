@@ -1,36 +1,53 @@
-name: Deploy to GitHub Pages
+name: Deploy Redirect to GitHub Pages
 
 on:
   push:
     branches: [ master ]
   workflow_dispatch:
 
-permissions:  # ADD THIS PERMISSIONS BLOCK
+permissions:
   contents: read
   pages: write
-  id-token: write  # THIS IS CRITICAL
+  id-token: write
 
 jobs:
-  deploy:
+  deploy-redirect:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
+      - name: Generate Redirect Files
+        run: |
+          mkdir build
+          cat << 'EOF' > build/index.html
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <title>Redirecting...</title>
+              <script>
+                var newHost = "https://shubham-portfolio-seven-theta.vercel.app";
+                var path = window.location.pathname;
+                if (path.startsWith("/writeup")) {
+                  path = path.substring(8);
+                }
+                var newUrl = newHost + path + window.location.search + window.location.hash;
+                window.location.replace(newUrl);
+              </script>
+              <meta http-equiv="refresh" content="2; url=https://shubham-portfolio-seven-theta.vercel.app/" />
+              <style>
+                body { background-color: #000; color: #fff; font-family: monospace; text-align: center; padding-top: 20vh; }
+                a { color: #4ade80; }
+              </style>
+            </head>
+            <body>
+              <p>We have moved! Redirecting you to our <a href="https://shubham-portfolio-seven-theta.vercel.app/">new portfolio</a>...</p>
+            </body>
+          </html>
+          EOF
+          cp build/index.html build/404.html
           
-      - name: Install dependencies
-        run: npm install
-        
-      - name: Build website
-        run: npm run build
-        
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
