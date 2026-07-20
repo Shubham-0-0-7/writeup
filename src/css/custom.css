@@ -317,7 +317,7 @@ main {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--text);
+  color: var(--muted);
   letter-spacing: 0.3px;
 }
 
@@ -326,6 +326,7 @@ main {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: var(--text) !important;
 }
 
 /* ============================================================

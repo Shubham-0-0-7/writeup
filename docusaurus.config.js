@@ -6,7 +6,11 @@ const config = {
   organizationName: 'Shubham-0-0-7',
   projectName: 'Shubham-0-0-7.github.io',
   onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'ignore',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'ignore',
+    },
+  },
 
   presets: [
     [
