@@ -1,5 +1,5 @@
 const config = {
-  title: "Shubham Chhatbar | Systems & Security",
+  title: "Portfolio",
   tagline: 'Systems internals, offensive security, and low-level development',
   url: 'https://shubham-0-0-7.github.io',
   baseUrl: '/', // Root level
