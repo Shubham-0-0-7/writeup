@@ -27,7 +27,7 @@ jobs:
               <meta charset="utf-8">
               <title>Redirecting...</title>
               <script>
-                var newHost = "https://shubham-portfolio-seven-theta.vercel.app";
+                var newHost = "https://shubhamchhatbar.in";
                 var path = window.location.pathname;
                 if (path.startsWith("/writeup")) {
                   path = path.substring(8);
@@ -35,14 +35,14 @@ jobs:
                 var newUrl = newHost + path + window.location.search + window.location.hash;
                 window.location.replace(newUrl);
               </script>
-              <meta http-equiv="refresh" content="2; url=https://shubham-portfolio-seven-theta.vercel.app/" />
+              <meta http-equiv="refresh" content="2; url=https://shubhamchhatbar.in/" />
               <style>
                 body { background-color: #000; color: #fff; font-family: monospace; text-align: center; padding-top: 20vh; }
                 a { color: #4ade80; }
               </style>
             </head>
             <body>
-              <p>We have moved! Redirecting you to our <a href="https://shubham-portfolio-seven-theta.vercel.app/">new portfolio</a>...</p>
+              <p>We have moved! Redirecting you to our <a href="https://shubhamchhatbar.in/">new portfolio</a>...</p>
             </body>
           </html>
           EOF
