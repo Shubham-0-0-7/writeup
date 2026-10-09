@@ -228,7 +228,7 @@ export default function Home() {
         {/* ---------- art ---------- */}
         <Section id="art" title="art">
           <p className="sec-lead">
-            Traditional work, made away from the screen. Hover a tile to resolve it. More on{' '}
+            Traditional work, made away from the screen. On desktop, hover a tile to resolve it. More on{' '}
             <a href={LINKS.instagram} target="_blank" rel="noopener noreferrer">@7thdimensionartss</a>.
           </p>
           <ul className="gallery">

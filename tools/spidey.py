@@ -34,7 +34,7 @@ SRC = """
 """.strip().split("\n")
 assert len({len(r) for r in SRC}) == 1
 W, H0 = len(SRC[0]), len(SRC)
-ROWS_TOTAL = H0 + 3                     # room for Gwen's hood tip; Spider-Man gets blank rows
+ROWS_TOTAL = H0
 
 # --- tag cells: thread vs eyes vs transparent background -------------------------------
 g = [list(r) for r in SRC]
@@ -51,7 +51,6 @@ while stack:                             # flood the outside; whatever '.' remai
 for r in range(H0):
     for c in range(W):
         if g[r][c] == '.': g[r][c] = 'e'
-g += [[' '] * W for _ in range(ROWS_TOTAL - H0)]
 
 def grid(): return [row[:] for row in g]
 
@@ -69,16 +68,18 @@ def gwenify(a):
     for r in head:                        # remaining head suit -> hood white
         for c in range(W):
             if a[r][c] == 'R': a[r][c] = 'H'
-    # hood tip below the chin
-    for c in (10, 14): a[28][c] = 'N'
-    for c in (11, 12, 13): a[28][c] = 'H'
-    a[29][11] = a[29][13] = 'N'; a[29][12] = 'H'
-    a[30][12] = 'N'
+    # eye frames: the black outline hugging the lenses becomes pink, lenses stay white
+    for r in range(H0):
+        for c in range(W):
+            if a[r][c] == 'N' and (r, c) not in outer and any(
+                    0 <= r+dr < H0 and 0 <= c+dc < W and a[r+dr][c+dc] == 'e'
+                    for dr in (-1, 0, 1) for dc in (-1, 0, 1)):
+                a[r][c] = 'P'
     return a
 
 PAL = {
   'spidey': {'N':'#05060a','R':'#e23636','B':'#3b66c4','w':'#cfd6ee','e':'#f4f6ff'},
-  'gwen':   {'N':'#14121f','R':'#2a2640','B':'#ff6fa8','w':'#6b6f88','e':'#ff6fa8','H':'#f6f7ff','T':'#14121f'},
+  'gwen':   {'N':'#14121f','R':'#2a2640','B':'#ff6fa8','w':'#6b6f88','e':'#f6f7ff','P':'#ff6fa8','H':'#f6f7ff','T':'#14121f'},
 }
 for name in ('spidey', 'gwen'):
     a = gwenify(grid()) if name == 'gwen' else grid()

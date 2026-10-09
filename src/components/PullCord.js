@@ -4,8 +4,8 @@ import {useColorMode} from '@docusaurus/theme-common';
 
 const MAX_PULL = 34;
 const SEEN_KEY = 'cord-pulled';
-const FIRST_TUG_MS = 4000;
-const REPEAT_TUG_MS = 11000;
+const FIRST_TUG_MS = 1500;
+const REPEAT_TUG_MS = 5500;
 
 const hasPulled = () => {
   try { return window.localStorage.getItem(SEEN_KEY) === '1'; } catch (e) { return false; }
@@ -33,7 +33,8 @@ export default function PullCord() {
     const tug = () => {
       if (!idle.current) return;
       if (!document.hidden) {
-        setDy(16);
+        setDy(18);
+        setKick((k) => k + 1);   // a sideways swing too, not just up and down
         timer = setTimeout(() => setDy(0), 260);
       }
       timer = setTimeout(tug, REPEAT_TUG_MS);
@@ -75,7 +76,7 @@ export default function PullCord() {
   };
 
   return (
-    <div className={`cord-swing${kick ? ' kicked' : ''}`} key={kick} aria-live="polite">
+    <div className={`cord-swing${kick ? (kick % 2 ? ' kick-a' : ' kick-b') : ''}`}>
       <button
         type="button"
         className={`cord${held ? ' held' : ''}`}
