@@ -580,3 +580,9 @@ html.plugin-pages .navbar [class*='colorModeToggle'] { display: none; }
   color: var(--text);
 }
 .navbar [class*='toggleButton_']:hover { border-color: var(--red); background: var(--surface-2); }
+
+/* desktop: Spidey hangs in front of the terminal's empty right side, so there's no dead space above it */
+@media (min-width: 621px) {
+  .landing { margin-top: 2rem; }
+  .cord-swing { top: -6rem; height: 13rem; z-index: 2; }
+}
