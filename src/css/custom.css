@@ -240,19 +240,25 @@ body {
 .whereabouts i { font-style: normal; color: var(--red-soft); margin: 0 0.4rem; }
 
 /* --- pull-cord hero --- */
-.cord-swing {
+.cord-kick {
   position: absolute;
   right: 2.5rem;
   top: -13.5rem;
   height: 13.5rem;
   width: 120px;
   transform-origin: 50% 0;
-  animation: swing 3.4s ease-in-out infinite alternate;
   z-index: 1;
 }
-/* two identical kicks, alternated, so every pull or tug restarts the animation */
-.cord-swing.kick-a { animation: kick-a 1.8s cubic-bezier(.3, .6, .4, 1) 1, swing 3.4s ease-in-out 1.8s infinite alternate; }
-.cord-swing.kick-b { animation: kick-b 1.8s cubic-bezier(.3, .6, .4, 1) 1, swing 3.4s ease-in-out 1.8s infinite alternate; }
+/* outer layer = the pull kick (damped, once); inner layer = the ambient sway. Both pivot on the top of the web, so they add up. */
+.cord-swing {
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 0;
+  animation: swing 3.4s ease-in-out infinite alternate;
+}
+/* two identical kicks, alternated, so every pull restarts the animation */
+.cord-kick.kick-a { animation: kick-a 1.8s cubic-bezier(.3, .6, .4, 1) 1; }
+.cord-kick.kick-b { animation: kick-b 1.8s cubic-bezier(.3, .6, .4, 1) 1; }
 .cord {
   display: flex;
   flex-direction: column;
@@ -276,7 +282,7 @@ body {
   pointer-events: none;
 }
 .cord:focus-visible { outline: 2px dashed var(--blue); outline-offset: 4px; }
-@keyframes swing { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
+@keyframes swing { from { transform: rotate(-5deg); } to { transform: rotate(5deg); } }
 @keyframes kick-a {
   0% { transform: rotate(0); }
   15% { transform: rotate(11deg); }
@@ -293,9 +299,9 @@ body {
   75% { transform: rotate(-2.5deg); }
   100% { transform: rotate(0); }
 }
+/* reduced motion: no ambient sway, but a pull is something the visitor does on purpose, so it still swings */
 @media (prefers-reduced-motion: reduce) {
-  .cord-swing, .cord-swing.kick-a, .cord-swing.kick-b { animation: none; }
-  .cord { transition: none; }
+  .cord-swing { animation: none; }
 }
 
 /* --- sections --- */
@@ -383,8 +389,8 @@ body {
 
 @media (max-width: 620px) {
   .home { padding-top: 1.5rem; font-size: 0.88rem; }
-  .cord-swing { right: 1rem; }
-  .cord-swing { width: 88px; top: -11rem; height: 11rem; }
+  .cord-kick { right: 1rem; }
+  .cord-kick { width: 88px; top: -11rem; height: 11rem; }
   .cord-hero { width: 88px; }
   .landing { margin-top: 7rem; }
   .lst-item { grid-template-columns: 1fr; }
@@ -584,5 +590,5 @@ html.plugin-pages .navbar [class*='colorModeToggle'] { display: none; }
 /* desktop: Spidey hangs in front of the terminal's empty right side, so there's no dead space above it */
 @media (min-width: 621px) {
   .landing { margin-top: 2rem; }
-  .cord-swing { top: -6rem; height: 13rem; z-index: 2; }
+  .cord-kick { top: -6rem; height: 13rem; z-index: 2; }
 }

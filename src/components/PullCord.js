@@ -1,18 +1,8 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import {useColorMode} from '@docusaurus/theme-common';
 
 const MAX_PULL = 34;
-const SEEN_KEY = 'cord-pulled';
-const FIRST_TUG_MS = 1500;
-const REPEAT_TUG_MS = 5500;
-
-const hasPulled = () => {
-  try { return window.localStorage.getItem(SEEN_KEY) === '1'; } catch (e) { return false; }
-};
-const rememberPull = () => {
-  try { window.localStorage.setItem(SEEN_KEY, '1'); } catch (e) { /* storage blocked: fine */ }
-};
 
 /* A pixel hero hanging from a web. Click, tap or drag down to pull:
    the theme flips (dark = Spider-Man, light = Spider-Gwen). */
@@ -24,34 +14,13 @@ export default function PullCord() {
   const [held, setHeld] = useState(false);
   const [kick, setKick] = useState(0);
   const start = useRef(null);
-  const idle = useRef(true);   // false once the visitor has touched the cord
-
-  // Hint: until the visitor has pulled once, give the web a small idle tug now and then.
-  useEffect(() => {
-    if (hasPulled() || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
-    let timer;
-    const tug = () => {
-      if (!idle.current) return;
-      if (!document.hidden) {
-        setDy(18);
-        setKick((k) => k + 1);   // a sideways swing too, not just up and down
-        timer = setTimeout(() => setDy(0), 260);
-      }
-      timer = setTimeout(tug, REPEAT_TUG_MS);
-    };
-    timer = setTimeout(tug, FIRST_TUG_MS);
-    return () => clearTimeout(timer);
-  }, []);
 
   const toggle = () => {
-    idle.current = false;
-    rememberPull();
     setColorMode(light ? 'dark' : 'light');
     setKick((k) => k + 1);
   };
 
   const onDown = (e) => {
-    idle.current = false;
     start.current = e.clientY;
     setHeld(true);
     e.currentTarget.setPointerCapture(e.pointerId);
@@ -76,7 +45,8 @@ export default function PullCord() {
   };
 
   return (
-    <div className={`cord-swing${kick ? (kick % 2 ? ' kick-a' : ' kick-b') : ''}`}>
+    <div className={`cord-kick${kick ? (kick % 2 ? ' kick-a' : ' kick-b') : ''}`}>
+      <div className="cord-swing">
       <button
         type="button"
         className={`cord${held ? ' held' : ''}`}
@@ -91,6 +61,7 @@ export default function PullCord() {
         <span className="cord-line" aria-hidden />
         <img className="cord-hero" src={hero} alt="" draggable="false" />
       </button>
+      </div>
     </div>
   );
 }
