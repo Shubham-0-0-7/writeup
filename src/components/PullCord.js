@@ -3,6 +3,15 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import {useColorMode} from '@docusaurus/theme-common';
 
 const MAX_PULL = 34;
+// damped swing played on every pull (Web Animations API, so it restarts each time)
+const KICK = [
+  {transform: 'rotate(0deg)', offset: 0},
+  {transform: 'rotate(11deg)', offset: 0.15},
+  {transform: 'rotate(-8deg)', offset: 0.35},
+  {transform: 'rotate(4deg)', offset: 0.55},
+  {transform: 'rotate(-2.5deg)', offset: 0.75},
+  {transform: 'rotate(0deg)', offset: 1},
+];
 
 /* A pixel hero hanging from a web. Click, tap or drag down to pull:
    the theme flips (dark = Spider-Man, light = Spider-Gwen). */
@@ -12,12 +21,12 @@ export default function PullCord() {
   const hero = useBaseUrl(light ? '/img/gwen.svg' : '/img/spidey.svg');
   const [dy, setDy] = useState(0);
   const [held, setHeld] = useState(false);
-  const [kick, setKick] = useState(0);
+  const kickRef = useRef(null);
   const start = useRef(null);
 
   const toggle = () => {
     setColorMode(light ? 'dark' : 'light');
-    setKick((k) => k + 1);
+    kickRef.current?.animate(KICK, {duration: 1800, easing: 'cubic-bezier(.3, .6, .4, 1)'});
   };
 
   const onDown = (e) => {
@@ -45,7 +54,7 @@ export default function PullCord() {
   };
 
   return (
-    <div className={`cord-kick${kick ? (kick % 2 ? ' kick-a' : ' kick-b') : ''}`}>
+    <div className="cord-kick" ref={kickRef}>
       <div className="cord-swing">
       <button
         type="button"
