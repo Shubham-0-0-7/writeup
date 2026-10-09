@@ -122,7 +122,7 @@ export default function Home() {
               <span className="win-dot" />
               <span className="win-dot" />
               <span className="win-dot" />
-              <span className="win-title">shubham@sec: ~</span>
+              <span className="win-title">neocipher@root</span>
             </div>
             <div className="win-body">
               <p className="ln"><span className="ps1">$ </span><span className="cmd">whoami</span></p>
