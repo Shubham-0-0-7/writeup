@@ -249,12 +249,12 @@ body {
   transform-origin: 50% 0;
   z-index: 1;
 }
-/* outer layer = the pull kick (damped, played from JS on each pull); inner layer = the ambient sway. Both pivot on the top of the web, so they add up. */
+/* the angle is driven by the pendulum loop in PullCord.js (inline transform on .cord-swing) */
 .cord-swing {
   width: 100%;
   height: 100%;
   transform-origin: 50% 0;
-  animation: swing 3.4s ease-in-out infinite alternate;
+  will-change: transform;
 }
 .cord {
   display: flex;
@@ -279,11 +279,6 @@ body {
   pointer-events: none;
 }
 .cord:focus-visible { outline: 2px dashed var(--blue); outline-offset: 4px; }
-@keyframes swing { from { transform: rotate(-5deg); } to { transform: rotate(5deg); } }
-/* reduced motion: no ambient sway, but a pull is something the visitor does on purpose, so it still swings */
-@media (prefers-reduced-motion: reduce) {
-  .cord-swing { animation: none; }
-}
 
 /* --- sections --- */
 .sec { margin: 3.5rem 0 0; }
