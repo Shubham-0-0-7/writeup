@@ -1,37 +1,90 @@
-# Generates static/img/spidey.svg and static/img/gwen.svg: pixel heroes hanging from a web by both hands.
-# Each row is (left 9 cols, centre col); the right half mirrors the left.
-# Tokens: N outline, H head, S suit, A accent, G gloves, W eye lens, D chest detail, T web.
-G = [
- "......GTG......",
- ".....S...S.....",
- "....S.....S....",
- "...S.......S...",
- "..S.NNNNNNN.S..",
- "..S.NNHLHNN.S..",
- "..S.NWWHWWN.S..",
- "..S.NHHHHHN.S..",
- "..S.NHHHHHN.S..",
- "..S..NNNNN..S..",
- "..SSSSSSSSSSS..",
- "...NSSSDSSSN...",
- "....NSSDSSN....",
- ".....NSSSN.....",
- ".....NSSSN.....",
- ".....NSNSN.....",
- ".....NSNSN.....",
- ".....NSNSN.....",
- ".....NANAN.....",
- ".....NANAN.....",
- "....NNNNNNN....",
-]
-assert all(len(r) == 15 for r in G), [len(r) for r in G]
+# Builds static/img/spidey.svg and static/img/gwen.svg from one hand-made pixel grid
+# (the upside-down hanging Spider-Man). Gwen is the same art, recoloured, with a hood trim and tip.
+# N outline  R suit  B blue  . background  w web thread  e eye lens
+SRC = """
+...........N.N...........
+..........NR.RN..........
+.........NRR.RRN.........
+........NRRR.RRRN........
+......NNRRRR.RRRRNN......
+.....NBRRRNN.NNRRRBN.....
+....NBBBRNBB.BBNRBBBN....
+...NBBBBNNN...NNNBBBBN...
+...NBBBNRRRN.NRRRNBBBN...
+....NNNRRRRNRNRRRRNNN....
+......NRRBNRRRNBRRN......
+.....NRRBNBRRRBNBRRN.....
+.....NRRNBRRNRRBNRRN.....
+......NRRRRRRRRRRRN......
+.......NNRRNNNRRNN.......
+.........NNRRRNN.........
+........NRRRRRRRN........
+.......NRRRRRRRRRN.......
+......NRRRRRRRRRRRN......
+......NRRNNRRRNNRRN......
+......NRN..NRN..NRN......
+......NRN.NRRRN.NRN......
+......NRNNRRRRRNNRN......
+......NRNRRRRRRRNRN......
+......NRRRRRRRRRRRN......
+......NRRRRRRRRRRRN......
+.......NRRRRRRRRRN.......
+........NNRRRRRNN........
+..........NNNNN..........
+""".strip().split("\n")
+assert len({len(r) for r in SRC}) == 1
+W, H0 = len(SRC[0]), len(SRC)
+ROWS_TOTAL = H0 + 3                     # room for Gwen's hood tip; Spider-Man gets blank rows
 
-PALETTES = {
-  'spidey': {'N':'#05060a','H':'#e23636','S':'#e23636','A':'#2f5fd0','G':'#e23636','W':'#f4f6ff','D':'#2f5fd0','L':'#9c1c1c','T':'#cfd6ee'},
-  'gwen':   {'N':'#14121f','H':'#f4f6ff','S':'#1c1a2b','A':'#ff6fa8','G':'#f4f6ff','W':'#4ad6e8','D':'#ff6fa8','L':'#9a9db5','T':'#6b6f88'},
+# --- tag cells: thread vs eyes vs transparent background -------------------------------
+g = [list(r) for r in SRC]
+for r in range(0, 9):                    # thread runs down the middle between the hands
+    if g[r][12] == '.': g[r][12] = 'w'
+for c in (11, 13):
+    if g[7][c] == '.': g[7][c] = 'w'
+seen, stack = set(), [(0, 0), (0, W - 1), (H0 - 1, 0), (H0 - 1, W - 1)]
+while stack:                             # flood the outside; whatever '.' remains is an eye
+    r, c = stack.pop()
+    if (r, c) in seen or not (0 <= r < H0 and 0 <= c < W) or g[r][c] != '.': continue
+    seen.add((r, c)); g[r][c] = ' '
+    stack += [(r+1, c), (r-1, c), (r, c+1), (r, c-1)]
+for r in range(H0):
+    for c in range(W):
+        if g[r][c] == '.': g[r][c] = 'e'
+g += [[' '] * W for _ in range(ROWS_TOTAL - H0)]
+
+def grid(): return [row[:] for row in g]
+
+# --- Gwen: hood trim + pointed tip ------------------------------------------------------
+def gwenify(a):
+    head = range(16, 28)
+    def n4(r, c): return [(r+dr, c+dc) for dr, dc in ((1,0),(-1,0),(0,1),(0,-1))
+                          if 0 <= r+dr < len(a) and 0 <= c+dc < W]
+    outer = {(r, c) for r in range(len(a)) for c in range(W)
+             if a[r][c] == 'N' and any(a[y][x] == ' ' for y, x in n4(r, c))}
+    ring = [(r, c) for r in head for c in range(W)
+            if a[r][c] == 'R' and any(p in outer for p in n4(r, c))]
+    for r, c in ring:
+        if r > 16: a[r][c] = 'T'         # 'T' = trim (black line just inside the hood edge)
+    for r in head:                        # remaining head suit -> hood white
+        for c in range(W):
+            if a[r][c] == 'R': a[r][c] = 'H'
+    # hood tip below the chin
+    for c in (10, 14): a[28][c] = 'N'
+    for c in (11, 12, 13): a[28][c] = 'H'
+    a[29][11] = a[29][13] = 'N'; a[29][12] = 'H'
+    a[30][12] = 'N'
+    return a
+
+PAL = {
+  'spidey': {'N':'#05060a','R':'#e23636','B':'#3b66c4','w':'#cfd6ee','e':'#f4f6ff'},
+  'gwen':   {'N':'#14121f','R':'#2a2640','B':'#ff6fa8','w':'#6b6f88','e':'#ff6fa8','H':'#f6f7ff','T':'#14121f'},
 }
-for name, C in PALETTES.items():
-    rects = [f'<rect x="{x}" y="{y}" width="1" height="1" fill="{C[c]}"/>'
-             for y, r in enumerate(G) for x, c in enumerate(r) if c != '.']
-    svg = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 {len(G)}" shape-rendering="crispEdges">' + ''.join(rects) + '</svg>'
+for name in ('spidey', 'gwen'):
+    a = gwenify(grid()) if name == 'gwen' else grid()
+    C = PAL[name]
+    rects = [f'<rect x="{x}" y="{y}" width="1" height="1" fill="{C[v]}"/>'
+             for y, row in enumerate(a) for x, v in enumerate(row) if v != ' ']
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {ROWS_TOTAL}" '
+           f'shape-rendering="crispEdges">' + ''.join(rects) + '</svg>')
     open(f'static/img/{name}.svg', 'w').write(svg)
