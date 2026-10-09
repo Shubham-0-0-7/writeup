@@ -561,3 +561,14 @@ article a[class*='cardContainer']:hover {
 }
 .footer--dark { --ifm-footer-background-color: var(--bg); background: var(--bg); }
 .footer__copyright { font-family: var(--font-mono); font-size: 0.75rem; color: var(--dim); text-align: center; }
+
+/* theme toggle: shown on writeup pages only (the homepage has the pull-cord) */
+html.plugin-pages .navbar [class*='toggle_'],
+html.plugin-pages .navbar [class*='colorModeToggle'] { display: none; }
+.navbar [class*='toggleButton_'] {
+  border: 2px solid var(--line-strong);
+  width: 2.1rem;
+  height: 2.1rem;
+  color: var(--text);
+}
+.navbar [class*='toggleButton_']:hover { border-color: var(--red); background: var(--surface-2); }
