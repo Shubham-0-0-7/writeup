@@ -14,6 +14,8 @@
   --line: #232a42;
   --line-strong: #36406a;
   --text: #e8eaf4;
+  --body: #c6cbe0;
+  --thread: #cfd6ee;
   --dim: #8a92b0;
   --red: #e23636;
   --red-soft: #ff6b6b;
@@ -59,9 +61,37 @@
   --docusaurus-highlighted-code-line-bg: rgba(226, 54, 54, 0.14);
 }
 
+
+/* light theme: Spider-Gwen palette (paper, ink, pink, teal) */
+[data-theme='light'] {
+  --bg: #f5f2ea;
+  --surface: #ece8dd;
+  --surface-2: #e3dfd2;
+  --line: #d5cfbf;
+  --line-strong: #aaa28d;
+  --text: #15161f;
+  --body: #2c2e3d;
+  --dim: #5d6070;
+  --thread: #6b6f88;
+  --red: #e0407b;
+  --red-soft: #c42a64;
+  --blue: #0e7f93;
+  --blue-deep: #17a2b8;
+
+  --ifm-color-primary: #c42a64;
+  --ifm-color-primary-dark: #b0255a;
+  --ifm-color-primary-darker: #a62356;
+  --ifm-color-primary-darkest: #881c46;
+  --ifm-color-primary-light: #d23a74;
+  --ifm-color-primary-lighter: #d9487d;
+  --ifm-color-primary-lightest: #e57ba2;
+  --docusaurus-highlighted-code-line-bg: rgba(224, 64, 123, 0.14);
+}
+[data-theme='dark'] { color-scheme: dark; }
+[data-theme='light'] { color-scheme: light; }
+
 html {
   background: var(--bg);
-  color-scheme: dark;
   scroll-behavior: smooth;
   scroll-padding-top: 4.5rem;
 }
@@ -138,17 +168,8 @@ body {
 /* --- hero: spidey perched on a terminal window --- */
 .landing {
   position: relative;
-  margin-top: 5.5rem;
+  margin-top: 8rem;
   margin-bottom: 3rem;
-}
-.sprite {
-  position: absolute;
-  right: 1.75rem;
-  bottom: 100%;
-  width: 76px;
-  height: auto;
-  image-rendering: pixelated;
-  margin-bottom: -2px;
 }
 .win {
   border: 2px solid var(--line-strong);
@@ -202,7 +223,7 @@ body {
 
 .about p {
   margin: 0 0 1.1rem;
-  color: #c6cbe0;
+  color: var(--body);
 }
 
 .quicklinks {
@@ -217,6 +238,57 @@ body {
   font-size: 0.82rem;
 }
 .whereabouts i { font-style: normal; color: var(--red-soft); margin: 0 0.4rem; }
+
+/* --- pull-cord hero --- */
+.cord-swing {
+  position: absolute;
+  right: 2.5rem;
+  top: -11rem;
+  height: 11rem;
+  width: 96px;
+  transform-origin: 50% 0;
+  animation: swing 3.6s ease-in-out infinite alternate;
+  z-index: 1;
+}
+.cord-swing.kicked {
+  animation: kick 1.6s cubic-bezier(.3, .6, .4, 1) 1, swing 3.6s ease-in-out 1.6s infinite alternate;
+}
+.cord {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  transition: transform 450ms cubic-bezier(.3, 1.9, .5, 1);
+}
+.cord.held { cursor: grabbing; transition: none; }
+.cord-line { flex: 1; width: 2px; background: var(--thread); }
+.cord-hero {
+  width: 96px;
+  height: auto;
+  image-rendering: pixelated;
+  pointer-events: none;
+}
+.cord:focus-visible { outline: 2px dashed var(--blue); outline-offset: 4px; }
+@keyframes swing { from { transform: rotate(-2.5deg); } to { transform: rotate(2.5deg); } }
+@keyframes kick {
+  0% { transform: rotate(0); }
+  15% { transform: rotate(10deg); }
+  35% { transform: rotate(-7deg); }
+  55% { transform: rotate(4deg); }
+  75% { transform: rotate(-2.5deg); }
+  100% { transform: rotate(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cord-swing, .cord-swing.kicked { animation: none; }
+  .cord { transition: none; }
+}
 
 /* --- sections --- */
 .sec { margin: 3.5rem 0 0; }
@@ -290,7 +362,7 @@ body {
   border-top: 1px solid var(--line);
 }
 .toolbox dt { color: var(--blue); }
-.toolbox dd { margin: 0; color: #c6cbe0; }
+.toolbox dd { margin: 0; color: var(--body); }
 
 .home-foot {
   margin-top: 4rem;
@@ -303,7 +375,10 @@ body {
 
 @media (max-width: 620px) {
   .home { padding-top: 1.5rem; font-size: 0.88rem; }
-  .sprite { width: 60px; right: 1rem; }
+  .cord-swing { right: 1rem; }
+  .cord-swing { width: 72px; top: -9.5rem; height: 9.5rem; }
+  .cord-hero { width: 72px; }
+  .landing { margin-top: 6.5rem; }
   .lst-item { grid-template-columns: 1fr; }
   .lst-idx { order: -1; }
   .toolbox { grid-template-columns: 1fr; gap: 0.1rem; }

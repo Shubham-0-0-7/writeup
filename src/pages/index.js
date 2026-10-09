@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useGlobalData from '@docusaurus/useGlobalData';
+import PullCord from '../components/PullCord';
 
 const LINKS = {
   github: 'https://github.com/Shubham-0-0-7',
@@ -109,14 +110,13 @@ function Section({id, title, aside, children}) {
 export default function Home() {
   const counts = useWriteupCounts();
   const total = Object.values(counts).reduce((a, b) => a + b, 0);
-  const sprite = useBaseUrl('/img/spidey.svg');
 
   return (
     <Layout title="Systems & security" description="Shubham Chhatbar: systems programming, offensive security, CTF writeups.">
       <main className="home">
         {/* ---------- hero ---------- */}
         <header className="landing">
-          <img className="sprite" src={sprite} alt="Pixel-art Spider-Man hanging upside down above the window" width="76" />
+          <PullCord />
           <div className="win">
             <div className="win-bar" aria-hidden>
               <span className="win-dot" />
