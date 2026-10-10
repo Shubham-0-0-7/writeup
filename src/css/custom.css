@@ -304,6 +304,9 @@ body {
 
 /* list rows */
 .lst {
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  line-height: 1.75;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -568,3 +571,9 @@ html.plugin-pages .navbar [class*='colorModeToggle'] { display: none; }
   .landing { margin-top: 2rem; }
   .cord-kick { top: -6rem; height: 13rem; z-index: 2; }
 }
+
+/* the series list also appears inside doc pages: keep the row look, not the prose-link look */
+.markdown .lst { margin: 1.5rem 0; padding: 0; }
+.markdown .lst li { margin: 0; }
+.markdown a.lst-item { border-bottom: 0; color: var(--text); }
+.markdown a.lst-item:hover { background: var(--surface); color: var(--text); }
