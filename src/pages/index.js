@@ -41,7 +41,7 @@ const PROJECTS = [
 
 const ART = [
   ['krishna', 'Krishna & calf'],
-  ['henna', 'Henna hands'],
+  ['henna', 'Radha Krishna\u2019s hands'],
   ['starry', 'Starry Night, after Van Gogh'],
   ['harry', 'Harry'],
   ['thor', 'Thor'],
