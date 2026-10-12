@@ -16,7 +16,7 @@ const LINKS = {
 
 const PROJECTS = [
   {name: 'cryptaudit', year: '2026', status: 'wip', desc: 'Static analysis for cryptographic API misuse in Rust: reused nonces, hardcoded keys, secrets compared with == or leaked through Debug.', tags: 'rust · static analysis', repo: 'cryptaudit'},
-  {name: 'Prisma OS', year: '2026', status: 'wip', desc: 'A hobby OS from scratch: bootloader, kernel, memory management.', tags: 'c · asm', repo: 'prisma-os'},
+  {name: 'Prisma OS', year: '2026', status: 'wip', desc: 'A hobby OS from scratch: bootloader, kernel, memory management.', tags: 'c · asm', repo: 'prismos'},
   {name: 'Search Engine', year: '2026', status: 'wip', desc: 'Crawler, indexer and BM25 ranker in Rust over a bounded Wikipedia corpus, served through an axum API.', tags: 'rust · search', repo: 'search-engine'},
   {name: 'Axum Vuln Lab', year: '2026', desc: 'Intentionally vulnerable Rust/Axum web app for practising common web bugs and their fixes.', tags: 'rust · web sec', repo: 'axum_vuln_lab'},
   {name: 'LLM Prompt Injection', year: '2026', desc: 'Testbed for prompt-injection attacks against LLM apps, and defences that hold up.', tags: 'python · ai sec', repo: 'llm_prompt_injection'},
