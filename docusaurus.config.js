@@ -7,7 +7,7 @@ const config = {
   projectName: 'Shubham-0-0-7.github.io',
   onBrokenLinks: 'ignore',
   onBrokenAnchors: 'ignore',
-  favicon: 'img/spidey.svg',
+  favicon: 'img/favicon.svg',
   markdown: {
     hooks: {
       onBrokenMarkdownLinks: 'ignore',
@@ -19,7 +19,7 @@ const config = {
     {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous'}},
   ],
   stylesheets: [
-    'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Silkscreen:wght@400;700&display=swap',
+    'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&display=swap',
   ],
 
   presets: [
@@ -40,20 +40,19 @@ const config = {
 
   themeConfig: {
     navbar: {
-      title: 'shubham',
+      title: 'shubham chhatbar',
       hideOnScroll: false,
       items: [
-        {to: '/#writeups', label: 'writeups', position: 'right', activeBaseRegex: '^/docs'},
+        {to: '/#findings', label: 'findings', position: 'right', activeBaseRegex: '^$a'},
+        {to: '/docs', label: 'writeups', position: 'right', activeBaseRegex: '^/docs'},
         {to: '/#projects', label: 'projects', position: 'right', activeBaseRegex: '^$a'},
-        {to: '/#art', label: 'art', position: 'right', activeBaseRegex: '^$a'},
-        {to: '/#about', label: 'about', position: 'right', activeBaseRegex: '^$a'},
-        {href: 'https://github.com/Shubham-0-0-7', label: 'github', position: 'right'},
+        {to: '/art', label: 'art', position: 'right'},
       ],
     },
     footer: {
       style: 'dark',
       links: [],
-      copyright: `© ${new Date().getFullYear()} Shubham Chhatbar`,
+      copyright: `Shubham Chhatbar · Mumbai · ${new Date().getFullYear()}`,
     },
     colorMode: {
       defaultMode: 'dark',
